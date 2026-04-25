@@ -1,0 +1,10 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/dense_layer.v,1776797190,verilog,,C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/eeg_amplitude_encoder.v,,dense_layer,,,,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/eeg_amplitude_encoder.v,1776797121,verilog,,C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/firing_rate_decoder.v,,eeg_amplitude_encoder,,,,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/firing_rate_decoder.v,1776797249,verilog,,C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_top.v,,firing_rate_decoder,,,,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v,1776797631,verilog,,C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/dense_layer.v,,lif_neuron,,,,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_tb.v,1776797311,verilog,,,,snn_seizure_tb,,,,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_top.v,1776797732,verilog,,C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_tb.v,,snn_seizure_top,,,,,,,,

@@ -1,0 +1,462 @@
+IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 19, NO. 6, DECEMBER 2025 1175
+Wearable Epilepsy Seizure Detection on FPGA
+With Spiking Neural Networks
+Paola Busia , Gianluca Leone , Andrea Matticola , Luigi Raffo , Member, IEEE,
+and Paolo Meloni , Member, IEEE
+Abstract—The development of epilepsy monitoring solutions
+suitable for everyday use is a very challenging task, where
+different constraints should be c ombined, resulting from the re-
+quired accuracy standards, the unobtrusiveness of the monitoring
+device, and the efﬁciency of real-time operation. Considering
+the time-varying nature of the electroencephalography signal
+(EEG), Spiking Neural Networks (SNNs) represent a promising
+solution to model the evolutio no ft h eb r a i ns t a t eb a s e do nt h e
+history of the previously processed signal. This work proposes
+an extremely lightweight SNN-based seizure detection solution,
+utilizing a simple encoding scheme to ensure high levels of
+sparsity. Despite the reduced complexity, the model provides
+a detection performance comparable with the state-of-the-art
+SNN-based approaches on the evaluated data from the CHB-
+MIT dataset, reaching a 96% area under the curve (AUC)
+and allowing 99.3% average accuracy, with the detection of
+100% of the examined seizure events and a false alarm rate
+of 0.3 false positives per hour. The suitability for real-time
+inference execution on wearable monitoring devices was assessed
+on SYNtzulu, demonstrating 0.5 μs inference time with 4.55 nJ
+energy consumption.
+Index Terms —Electroencephalography, spiking neural net-
+works, wearable.
+I. I NTRODUCTION
+T
+HE World Health Organization estimates that 50 million
+individuals worldwide suffer from epilepsy, making it the
+most prevalent chronic brain condition[1]. People with epilepsy
+suffer from sudden seizure events, compromising the normal
+electrical activity of the brain and resulting in danger even
+Received 13 March 2025; revised 2 May 2025; accepted 26 May 2025.
+Date of publication 30 May 2025; date of current version 10 December 2025.
+This work was supported in part by the European Union’s Horizion 2020
+Research and Innovation Progr am under Grant GA 101140052 (H2TRAIN),
+in part by the NextGenerationEU Mission 4, Component 2, Investment
+1.5, CUP B83C22002820006—Project METBIOTEL—Innovation Ecosystem
+ECS 0000024 ROME TECHNOPOLE SPOKE 1, and SPOKE 6, and in part
+by Chips Joint Undertaking in EdgeAI “Edge AI Technologies for Optimised
+Performance Embedded Processing” pr oject. The Edge AI project members
+include top up funding by Austria, B elgium, France, Gr eece, Italy, Latvia,
+Netherlands, and Norway under grant agreement No 101097300. Funded by
+the European Union. Views and opinions expressed are however those of the
+author(s) only and do not necessarily reﬂect those of the European Union or
+the Chips Joint Undertaking. Neither the European Union nor the granting
+authority can be held responsible for them. This paper was recommended by
+Associate Editor H. Chen. (Corresponding author: Paola Busia.)
+The authors are with the Dipartimento di Ingegneria Elettrica ed
+Elettronica, University of Cagliari, 09123 Cagliari, Italy (e-mail:
+paola.busia@unica.it; gianluca.leone94@unica.it; a.matticola@studenti.
+unica.it; raffo@unica.it; paolo.meloni@unica.it).
+Color versions of one or more ﬁgures in this article are available at https://
+doi.org/10.1109/TBCAS.2025.3575327.
+Digital Object Identiﬁ er 10.1109/TBCAS.2025.3575327
+during normal life activities. Due to this reason, both patients
+and caregivers have a great interest in the development and
+optimization of reliable remote monitoring solutions.
+The standard diagnostic reference is represented by the elec-
+troencephalography (EEG) signal, which is typically analyzed
+by expert physicians to recognize the onset of seizure events.
+However, artiﬁcial intelligence approaches to automate EEG
+processing have been t horoughly explored in the literature,
+resulting in remarkable accuracy i n the seizure classiﬁcation
+[2] and seizure prediction tasks [3], but reaching adequate
+standards in the low-power w earable domain is still an open
+research challenge.
+Recently, due to the developments in neuromorphic com-
+puting, epilepsy monitoring solutions based on Spiking Neural
+Networks (SNNs) have been proposed, as an extremely energy-
+efﬁcient approach for real-time long-term monitoring. The SNN
+mechanism offers an interesting opportunity to model the signal
+amplitude and frequency information with optimal efﬁciency,
+thanks to the inherent time-dependency in the network evo-
+lution, allowing us to consider the context of previously pro-
+cessed inputs. Furthermore, the binary encoding of the data
+removes the workload associated with multiplication execution,
+thus SNN inference mainly invo lves addition operations. Due
+to these reasons, SNNs represent a perfect candidate for low-
+power wearable monitoring solutions, which are gaining in-
+creasing interest [4], [5], [6], [7].
+Nonetheless, most of the spiking solutions addressing
+epilepsy monitoring overlook relevant issues, such as the need
+to reduce the acquisition setup to a low-count subset of unobtru-
+sive channels, minimizing the stigma of a monitoring device to
+be used in normal life, or the need to reduce the number of false
+alarms, in order to improve the reliability and avoid provoking
+unnecessary stress to the patient. Fur thermore, full utilization
+of the sparsity and efﬁciency of spiking models requires spe-
+cialized neuromorphic hardware [8], [9].
+In this work, we propose an extremely lightweight SNN-
+based epilepsy monitoring solution to address these relevant
+issues, by using only acquisition from the 4 temporal chan-
+nels and offering a classiﬁcation accuracy compatible with the
+detection of all the occurred seizure events, with a reduced
+number of false alarms. Cons idering accessibility as a key
+objective, we exploit SYNtzulu [10], a tiny low-power SNN
+processor design that can be squeezed on low-cost and limited-
+resources FPGAs such as the Lattice iCE40UP5K, which was
+previously considered as a target for real-time biological signal
+© 2025 The Authors. This work is licensed under a Creative Co mmons Attribution 4.0 Licen se. For more information,
+see https://creativecommons.org/licenses/by/4.0/
+1176 IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 19, NO. 6, DECEMBER 2025
+processing [11], [12]. The main contributions can be summa-
+rized as follows:
+•a spiking solution for seizure detection from the raw EEG
+signal, leveraging a simple and effective encoding scheme
+and a lean SNN, ensuring the detection of 100% of the
+tested seizure events, with 99.3% segment-level accuracy
+and 0.3 false-positives-per-hour (FP/h);
+•the customization of SYNtzulu’s encoding and decoding
+slots for the implementation of the proposed approach;
+•demonstration of suitability for real-time monitoring, with
+inference time and power consumption measurements on
+the target hardware, resulting in 0.5 μs and 4.55 nJ per
+inference.
+The organization of the paper includes a summary of related
+work in literature in Section II. The proposed seizure detection
+approach is described in Section III, whereas the classiﬁcation
+performance assessment is reported in Section IV-A. Section V
+summarizes the real-time inference performance evaluation,
+whereas Section VI discusses the comparison with the state-
+of-the-art in spiking solutions for epilepsy monitoring.
+II. R
+ELATED WORK
+A comprehensive survey about SNNs for epilepsy monitoring
+is presented in[13], reporting works targeting seizure prediction
+and classiﬁcation. The prediction task requires some assump-
+tions to be made on the reference datasets, as an indication
+of the onset of a preictal state is often missing. For exam-
+ple, the authors of [14] deﬁne a 30-minute preictal interval
+and a prediction horizon of 5 minutes, exploiting a spiking
+model with 10k parameters to recognize preictal from interictal
+samples in the CHB-MIT dataset. In our work, we focus on
+the simpler classiﬁcation problem, targeting the recognition of
+ictal samples against normal portions of the EEG recordings.
+The literature provides several r elevant references, presenting
+different processing and classiﬁcation solutions while target-
+ing the same open-source dataset [15], [16], [17], [18], [19],
+[20], [21].
+The authors of [15] propose an SNN model integrating three
+convolutional and two dense layers, applied on the Short-
+time Fourier Transform of one-second EEG segments, after
+ﬁltering out the power line noise and the DC component. A
+combination of SNN and Support Vector Machine (SVM) is
+proposed in [16], where the execution of SNN inference is
+conditioned to a pre-detectio n mechanism based on a power
+threshold. The network is applied to power spectrum features,
+frequency-encoded into spikes considering 50 temporal steps
+for each new item to be classiﬁed. The energy efﬁciency of
+these solutions is assessed considering the required energy per
+synaptic operation on the Loihi platform [15], or the typical
+50 pJ energy consumption for the emission of a spike, and
+147 pJ for spike transfer on 28nm technology [16]. These
+approaches require the computation of Fourier transform or
+spectrum power prior to SNN inference, while, in our work,
+we consider raw EEG signals, to reduce the complexity of the
+processing.
+A solution based on raw EEG was previously exploited in
+other works, such as [17], presenting a hardware implemen-
+tation of a seizure detection system, exploiting level-crossing
+ADC applied to the raw signal and Poisson rate encoding, fed
+to a convolutional SNN model. Similarly, the work of [18]
+proposed a spiking version of the VGG network, applied on
+rate-coded EEG segments of 4-second length, whereas [19]
+presented a spiking transformer model with embedding based
+on temporal convolutional layers applied to 5s segments of
+the raw EEG signal and evaluated on both classiﬁcation and
+prediction problems.
+Despite being extremely efﬁcient in terms of power and
+computational demands, the SNN models in [15], [16], [17],
+[18], [19] rely on complete acquisition setups, accessing 18-23
+acquisition channels, designing a remarkably accurate but quite
+obtrusive system.
+On the contrary, it is common, when focusing on wearable
+devices, to refer to a reduced set of electrodes. Coherently,
+solutions oriented to long-term monitoring outside the Epilepsy
+Monitoring Units (EMUs) should focus on seizure detection by
+accessing a limited number of acquisition channel s, compat-
+ible with a reduced wearable setup, minimally impacting the
+normal life of the patients, and avoiding social stigma. This
+strict constraint is considered in recent works, such as [22] and
+[23], presenting a tiny transformer and a simple Convolutional
+Neural Network (CNN) for seizure detection based on acqui-
+sition limited to the temporal channels, and [24]
+, proposing a
+self-supervised CNNevaluated based on two bipolar acquisition
+channels. The unobtrusiveness of the acquisition device repre-
+sented a design constraint for these solutions, which demon-
+strated complexity and efﬁciency compatible with wearable
+monitoring devices, yet not exploiting the advantages of spiking
+computation.
+As a direct reference for performance comparison, we con-
+sider two different works presenting SNN-based solutions
+leveraging access to onl y two acquis ition channels, [20] and
+[21]. Both these models enable a high detection rate, leav-
+ing some room for reducing the false alarm rate, to improve
+the quality of user experience. With this work, we aim to
+improve the energy efﬁciency of the state-of-the-art SNN-
+based alternatives, with an extremely lightweight model reach-
+ing competitive detection accur acy and requiring no addi-
+tional feature extraction, thanks to a simple encoding scheme
+capturing the most relevant EEG information and ensuring
+high levels of sparsity. T he quantitative comparison with
+the alternatives from the literature is discussed in detail in
+Section VI.
+III. M
+ETHOD
+This section describes the proposed seizure detection mech-
+anism, presenting the target dataset, as well as the encoding
+scheme and the network model. Finally, we include the descrip-
+tion of the necessary modiﬁcations to SYNtzulu’s architecture
+for real-time signal encoding, inference, and output decoding
+execution.
+BUSIA et al.: WEARABLE EPILEPSY SEIZURE DETECTION ON FPGA WITH SNN S 1177
+TABLE I
+COMPOSITION OF THE CONSIDERED DATA FROM THE CHB-MIT
+DATASET
+Subject Seizure Seizure Seizure Tested
+records events time hours
+chb01 7 7 7m i n2 2s 6h4 0m i n
+chb02 3 3 2m i n5 2s 2h1 5m i n
+chb03 7 7 6m i n4 2s 7h
+chb05 5 5 9m i n1 8s 5h
+chb07 3 3 5m i n2 5s 9h
+chb08 5 5 15 min 19 s 5h
+chb09 3 4 4m i n3 6s 9h3 0m i n
+chb10 7 7 7m i n2 7s 14 h
+chb11 3 3 13 min 26 s 2h5 0m i n
+Tot 43 44 1h1 2m i n2 7s 61 h
+A. Dataset
+The optimization and assessment of the proposed seizure
+detection approach targeted the open-source CHB-MIT Scalp
+EEG dataset [25], [26], curated by the Children’s Hospital
+Boston and the Massachusetts Institute of Technology. The 23
+pediatric patients included in the dataset presented intractable
+epilepsy, and were monitored during medication withdrawal.
+The dataset includes a list of scalp EEG records of different
+durations, typically one hour, annotated by experts who re-
+ported the start time and end time of seizure events. The data
+was collected with a 256 Hz sampling frequency, including a
+variable number of acquisitionchannels, ranging from 18 to 23.
+This work targets the development of wearable systems for
+continuous monitoring in everyday life, we thus consider un-
+obtrusive acquisition setups, limited to the four temporal chan-
+nels compatible with behind-the-ear acquisition, namely F7-T7,
+T7-P7, F8-T8, T8-P8, according to the 10-20 international sys-
+tem. Based on the documented re sults in literature about inter-
+patient EEG variability [27], we focused on patient-speciﬁc
+epilepsy monitoring, selecting a subset of subjects including
+patients ranging from 1 to 11, and excluding patientchb04, due
+to a prolonged signal inst ability observed in record chb04_05,
+and patient chb06,a si n [24], due to the very short duration of
+the seizure events recorded. No additional considerations were
+made for the selection of the subset of patients considered for
+the appropriate evaluation of themodel, resulting from the order
+of the numbering in the dataset. Finally, considering the impor-
+tance of accounting for the variabilityof different seizure events
+for the same patient, we referred to the leave-one-record-out
+cross-validation approach, to test the detection of seizure events
+completely unseen during the learning phase. For the training
+and test of the models, we consider only records including a
+seizure event. The composition of the data is summarized in
+Table I.
+B. Encoding
+EEG signal amplitude and frequenc y are usually especially
+affected by the occurrence of seizure events. Based on this
+consideration, we selected an encoding approach capable of
+highlighting the amplitude variations with time on each of
+the considered EEG channels, as represented in the scheme in
+Fig. 1. The instantaneous amplitude of the signal is mapped
+on one of 16 different amplitude levels, deﬁned based on the
+(partial) maximum and minimum value of the signal observed
+during the ﬁrst 5 minutes from one of the training records. The
+amplitude levels are equidistant, with a step deﬁned based on
+the partial maximum and minimum for each channel, which
+are matched to levels 2 and 13, leaving four additional external
+representation levels for the increased signal amplitude usually
+observed during seizure occurrence. The amplitude of the signal
+acquired on each channel is thus encoded at every time step into
+16 one-hot values.
+Combined with the timing of the spikes, encoding the
+frequency-related features, this encoding scheme captures well
+the amplitude-related information needed for the discrimina-
+tion of seizure events, as can be observed by comparing the
+resulting representation of normal and seizure portions of the
+signal, reported in Fig.2. For each acquisitionchannel, the plots
+summarize the input spike count observed on each encoding
+level for seizure and non-seizure windows, for one reference
+subject, namely chb01. As can be noticed, there is signiﬁcant
+discrimination in the input spike distribution, with nonseizure
+windows resulting in a spiking activity limited to low-amplitude
+levels (central levels, from 6 to 9), and seizure windows show-
+ing noticeable activity in levels corresponding to an increased
+amplitude.
+This intuitive encoding scheme, combined with the simplicity
+of the proposed classiﬁer, provides an easily interpretable clas-
+siﬁcation, based on the distribution of the input signal ampli-
+tude. It is also especially suitable for real-time implementation,
+as it only requires the comparison ofthe current amplitude value
+with the 16 reference levels considered. Furthermore, it enables
+a signiﬁcant amount of sparsity in the inference computational
+workload, as on each temporal st ep only one amplitude level
+for each channel can receive a spike in input.
+C. Network Model
+The detection of seizure events on the EEG signal is per-
+formed through an extremely lightweight SNN model. The
+model integrates the Leaky-Integrate-and-Fire (LIF) neuron,
+which evolves based on the current membrane voltage value,
+v(t), and based on the input current received in input, as re-
+ported in Equation ( 1):
+˜v(t+1)= α·v(t)+
+∑
+w ·s
+in(t+1) (1)
+where sin(t+1) is the input train of spikes, w are the synaptic
+weights assigned to the input connections, and αis a decay
+factor. Based on the current value of the membrane voltage, the
+neuron produces an output spikes
+out when a threshold valueθis
+reached, according to Equation (2). Finally, whenever an output
+spike is ﬁred, the membrane voltage is reset by subtracting the
+threshold value, as reported in Equation 4.
+sout(t+1)=
+{
+1, if ˜v(t+1) ≥θ
+0, otherwise (2)
+v(t+1)=
+{
+˜v(t+1), if ˜v(t+1) <θ
+˜v(t+1) −θ, otherwise (3)
+1178 IEEE TRANSACTIONS ON BIOMEDICAL CIRCUITS AND SYSTEMS, VOL. 19, NO. 6, DECEMBER 2025
+Fig. 1. Proposed encoding scheme, applied to one acquisitio n channel. The plot refers to an EEG excerpt from record chb01_03. The signal amplitude is
+mapped into 16 input synapses, emitting a spike when the amplitude falls with in the corresponding region. A single spike is produced on one of the ampli tude
+levels for each newly acquired samp le, with a 256 Hz acquisition frequency.
+Fig. 2. Average spike count obtained for the input si gnal in the reference encoding levels, consider ing the available data from t he seizure records of subject
+chb01. Spike count is evaluated on windows of 8-second length.
+TABLE II
+TOPOLOGY AND PARAMETERS OF THE PROPOSED SNN MODEL
+Layer Synapse Neuron Parameters OPS
+Dense Layer 1 64 8 520 520
+Dense Layer 2 8 1 9 9
+The lightweight architecture considered in this work integrates
+an input layer of 64 synapses, each representing the input spikes
+produced on each amplitude level by the signal acquired from
+the temporal channels. This set of input synapses is fully con-
+nected to a hidden layer including eight neurons, and ﬁnally to
+a single output neuron. The network architecture is summarized
+in Table II.
+The network is trained to encode the classiﬁcation between
+the normal and seizure classes in the ﬁring rate of the output
+neuron, evaluated on a window ofx temporal steps. The output
+rate is thus the sum of the spikes emitted by the output neuron
+during thex temporal steps required to process an input segment
+of length x. As will be detailed in Section IV .A, the typical
+value of x selected for training is 2048, corresponding to an
+input segment of length 8 s, whereas for real-time execution it
+is 4096.
+The model’s training leveraged the Pytorch framework, and
+particularly the SnnTorch library[28] for the LIF neuron imple-
+mentation. Training is performed with backpropagation through
+time and aims at learning the correct output ﬁring rate of the
+output neuron for each of the training segments, considering
+a target low rate of 0.03 for normal segments, and a target
+high rate of 0.35 for seizure segments. The supervised training
+routine iterates over the training batches, evaluating backward
+propagation based on the training loss, measured as the mean
+squared error between the output ﬁring rate obtained on the
+output neuron and the target ﬁring rate for the target class based
+on the annotations on the dataset. The training is conﬁgured
+to complete a maximum of 500 epochs, with Adam optimizer,
+batch size 32, and initial learni ng rate 0.001. The best model
+is updated based on the loss evaluated on the validation set:
+after 20 epochs of patience where the model is not updated, the
+learning rate decays with a factor of 0.3. On average, training
+required 430 epochs. Model training was performed on Google
+Colaboratory.
+D. Target Hardware
+The proposed method has been implemented on the ultra-
+low-power SYNtzulu accelerator [10], shown in Fig. 3.
+SYNtzulu is an open-source end-to-end SNN accelerator de-
+signed for tiny FPGAs
+1. It efﬁciently processes dense spiking
+layers, handling 8 synapses and 2 neurons per cycle on two par-
+allel cores, while leveraging spike sparsity. The system includes
+a compact bit-serial RISC-V microcontroller
+2 that initializes the
+accelerator at system start-up and manages the I/O data ﬂow
+through the SPI and UART modules. Moreover, the softcore
+1https://github.com/gianlucaleone/SYNtzulu
+2https://github.com/olofk/serv
+BUSIA et al.: WEARABLE EPILEPSY SEIZURE DETECTION ON FPGA WITH SNN S 1179
+Fig. 3. SYNtzulu’s architecture.
+gates the system when idle and automatically wakes it up when
+a new set of samples is available, relying on a memory-mapped
+timer.
+The clock generation system includes both a high-frequency
+oscillator and a low-frequency oscillator. The only module con-
+nected to the low-frequency oscillator is the memory-mapped
+timer. To put the system to sleep, the processor simply turns off
+the high-frequency oscillator. The oscillator and the system are
+woken up by the timer at the appropriate time.
+Moreover, SYNtzulu hosts two application-speciﬁc conﬁg-
+urable modules named encoding and decoding slots, that serve
+the purpose of encoding sensors’ data into spikes and output
+spikes into the result of the classiﬁcation at hand. In this work,
+we designed two new encoding and decoding slots to efﬁciently
+map the presented encoding and decoding algorithms in hard-
+ware.
+The encoding slot implementation is a folded lightweight
+module that leverages the SPI communication latency to carry
+out the encoding computation. The incoming samples, pre-
+sented every 32 clock cycles at the input port of the encod-
+ing module, undergo a series of comparisons. A BRAM-based
+memory holds the minimum channel amplitude levels and the
+step values. Initially, the input sample is compared with the
+ﬁrst amplitude level; if it is smaller, the amplitude level is
+identiﬁed; otherwise, the level is increased by the step value
+until the condition is satisﬁed. A four-bit register keeps track
+of the number of iterations. When the amplitude level is found,
+a 4 to 16 decoder generates the encoded spike set, which is then
+written in four entries of the SNN accelerator spike memory in
+four consecutive clock cycles.
+The decoding slot computes the running sum over 4096
+output inferences. To achieve this, the module incorporates a
+BRAM-based memory organized as 1 × 4096, which stores
+spike values. At each network iteration, the spike count is
+updated according to the new spike produced by the SNN and
+the oldest spike discarded from the BRAM.
+IV . E
+XPERIMENTAL RESULTS
+In this section, we summarize the seizure detection results
+obtained in the leave-one-record-out tests of the targeted sub-
+jects, including the description of the performance assessment
+method and the analysis of the accuracy drop connected to the
+parameters’ quantization.
+A. Classiﬁcation Performance Assessment
+For each subject, having N EEG records showing at least one
+seizure episode, we trained N different models, to be tested on
+the left-out record. For the training of the model, we segmented
+the EEG signal into windows of 8 s length, that is 2048 samples,
+representing 2048 (x) time steps. The selection of 8 s as the win-
+dow length follows the ﬁndings of previous studies on real-time
+seizure detection [22], [27], demonstrating a higher accuracy
+compared to 2 s, 4 s, and 16 s window length. A single inference
+run is performed to process each newly acquired sample from
+the temporal channels, and after 2048 steps classiﬁcation is
+produced based on the output spike rate in the 2048 window.
+While training data is randomly shufﬂed, for the real-time
+seizure detection assessment we consider the test record in
+chronological order, and let the network evolve forl time steps,
+corresponding to the whole record length. Real-time detection
+is evaluated for each newly acquired sample after the ﬁrst x
+samples have been processed. The output ﬁring rate is evaluated
+with a sliding window approach, referring to thex−1 previous
+time steps, and it is compared with a patient-speciﬁc thresh-
+old to discriminate between normal and seizure segments. A
+common solution exploited in the literature to ﬁlter out isolated
+false alarms is to post-process the output with context-aware

@@ -1,0 +1,7 @@
+Running: xsim.dir/snn_seizure_tb_behav/xsimk.exe -simmode gui -wdb snn_seizure_tb_behav.wdb -simrunnum 0 -socket 61779
+Design successfully loaded
+Design Loading Memory Usage: 11636 KB (Peak: 11636 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 21384 KB (Peak: 21384 KB)
+Simulation CPU Usage: 12467 ms

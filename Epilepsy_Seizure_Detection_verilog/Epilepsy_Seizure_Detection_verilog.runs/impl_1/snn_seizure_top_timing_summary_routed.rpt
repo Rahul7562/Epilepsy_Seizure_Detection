@@ -1,0 +1,2361 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Wed Apr 22 00:38:07 2026
+| Host         : system running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file snn_seizure_top_timing_summary_routed.rpt -pb snn_seizure_top_timing_summary_routed.pb -rpx snn_seizure_top_timing_summary_routed.rpx -warn_on_violation
+| Design       : snn_seizure_top
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      1.665        0.000                      0                 4313        0.136        0.000                      0                 4313        9.500        0.000                       0                  4241  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock    Waveform(ns)       Period(ns)      Frequency(MHz)
+-----    ------------       ----------      --------------
+clk_50m  {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_50m             1.665        0.000                      0                 4313        0.136        0.000                      0                 4313        9.500        0.000                       0                  4241  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)        clk_50m       clk_50m       
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_50m
+  To Clock:  clk_50m
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.665ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.136ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        9.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.665ns  (required time - arrival time)
+  Source:                 decoder/seizure_detected_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            seizure_alert
+                            (output port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Max at Slow Process Corner
+  Requirement:            20.000ns  (clk_50m rise@20.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        5.190ns  (logic 3.116ns (60.044%)  route 2.074ns (39.956%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           8.000ns
+  Clock Path Skew:        -5.110ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 20.000 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.110ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.830     5.110    decoder/clk_50m_IBUF_BUFG
+    SLICE_X6Y12          FDCE                                         r  decoder/seizure_detected_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y12          FDCE (Prop_fdce_C_Q)         0.518     5.628 r  decoder/seizure_detected_reg/Q
+                         net (fo=1, routed)           2.074     7.701    seizure_alert_OBUF
+    W5                   OBUF (Prop_obuf_I_O)         2.598    10.300 r  seizure_alert_OBUF_inst/O
+                         net (fo=0)                   0.000    10.300    seizure_alert
+    W5                                                                r  seizure_alert (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)   20.000    20.000 r  
+                         clock pessimism              0.000    20.000    
+                         clock uncertainty           -0.035    19.965    
+                         output delay                -8.000    11.965    
+  -------------------------------------------------------------------
+                         required time                         11.965    
+                         arrival time                         -10.300    
+  -------------------------------------------------------------------
+                         slack                                  1.665    
+
+Slack (MET) :             2.142ns  (required time - arrival time)
+  Source:                 decoder/classification_valid_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            classification_valid
+                            (output port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Max at Slow Process Corner
+  Requirement:            20.000ns  (clk_50m rise@20.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        4.707ns  (logic 3.034ns (64.445%)  route 1.674ns (35.555%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           8.000ns
+  Clock Path Skew:        -5.116ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 20.000 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.116ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.836     5.116    decoder/clk_50m_IBUF_BUFG
+    SLICE_X1Y2           FDCE                                         r  decoder/classification_valid_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y2           FDCE (Prop_fdce_C_Q)         0.456     5.572 r  decoder/classification_valid_reg/Q
+                         net (fo=1, routed)           1.674     7.245    classification_valid_OBUF
+    U7                   OBUF (Prop_obuf_I_O)         2.578     9.823 r  classification_valid_OBUF_inst/O
+                         net (fo=0)                   0.000     9.823    classification_valid
+    U7                                                                r  classification_valid (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)   20.000    20.000 r  
+                         clock pessimism              0.000    20.000    
+                         clock uncertainty           -0.035    19.965    
+                         output delay                -8.000    11.965    
+  -------------------------------------------------------------------
+                         required time                         11.965    
+                         arrival time                          -9.823    
+  -------------------------------------------------------------------
+                         slack                                  2.142    
+
+Slack (MET) :             6.670ns  (required time - arrival time)
+  Source:                 decoder/write_ptr_reg[0]_rep__5/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[0]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_50m rise@20.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        13.154ns  (logic 2.802ns (21.302%)  route 10.352ns (78.698%))
+  Logic Levels:           12  (LUT5=1 LUT6=5 MUXF7=3 MUXF8=3)
+  Clock Path Skew:        0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.589ns = ( 24.589 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.019ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.739     5.019    decoder/clk_50m_IBUF_BUFG
+    SLICE_X18Y21         FDCE                                         r  decoder/write_ptr_reg[0]_rep__5/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y21         FDCE (Prop_fdce_C_Q)         0.518     5.537 r  decoder/write_ptr_reg[0]_rep__5/Q
+                         net (fo=121, routed)         3.380     8.917    decoder/write_ptr_reg[0]_rep__5_n_0
+    SLICE_X46Y55         LUT6 (Prop_lut6_I4_O)        0.124     9.041 r  decoder/seizure_detected_i_1933/O
+                         net (fo=1, routed)           0.000     9.041    decoder/seizure_detected_i_1933_n_0
+    SLICE_X46Y55         MUXF7 (Prop_muxf7_I1_O)      0.247     9.288 r  decoder/seizure_detected_reg_i_914/O
+                         net (fo=1, routed)           0.000     9.288    decoder/seizure_detected_reg_i_914_n_0
+    SLICE_X46Y55         MUXF8 (Prop_muxf8_I0_O)      0.098     9.386 r  decoder/seizure_detected_reg_i_405/O
+                         net (fo=1, routed)           1.228    10.614    decoder/seizure_detected_reg_i_405_n_0
+    SLICE_X42Y46         LUT6 (Prop_lut6_I1_O)        0.319    10.933 r  decoder/seizure_detected_i_151/O
+                         net (fo=1, routed)           0.000    10.933    decoder/seizure_detected_i_151_n_0
+    SLICE_X42Y46         MUXF7 (Prop_muxf7_I1_O)      0.214    11.147 r  decoder/seizure_detected_reg_i_87/O
+                         net (fo=1, routed)           0.000    11.147    decoder/seizure_detected_reg_i_87_n_0
+    SLICE_X42Y46         MUXF8 (Prop_muxf8_I1_O)      0.088    11.235 r  decoder/seizure_detected_reg_i_55/O
+                         net (fo=1, routed)           1.064    12.299    decoder/seizure_detected_reg_i_55_n_0
+    SLICE_X31Y33         LUT6 (Prop_lut6_I5_O)        0.319    12.618 r  decoder/seizure_detected_i_39/O
+                         net (fo=1, routed)           0.000    12.618    decoder/seizure_detected_i_39_n_0
+    SLICE_X31Y33         MUXF7 (Prop_muxf7_I1_O)      0.217    12.835 r  decoder/seizure_detected_reg_i_33/O
+                         net (fo=1, routed)           0.000    12.835    decoder/seizure_detected_reg_i_33_n_0
+    SLICE_X31Y33         MUXF8 (Prop_muxf8_I1_O)      0.094    12.929 r  decoder/seizure_detected_reg_i_20/O
+                         net (fo=13, routed)          1.994    14.923    decoder/write_ptr_reg[11]_0
+    SLICE_X6Y14          LUT5 (Prop_lut5_I2_O)        0.316    15.239 f  decoder/seizure_detected_i_6/O
+                         net (fo=2, routed)           1.182    16.421    decoder/seizure_detected_i_6_n_0
+    SLICE_X10Y13         LUT6 (Prop_lut6_I0_O)        0.124    16.545 f  decoder/blanking_count[8]_i_3/O
+                         net (fo=1, routed)           0.971    17.516    decoder/blanking_count[8]_i_3_n_0
+    SLICE_X6Y12          LUT6 (Prop_lut6_I1_O)        0.124    17.640 r  decoder/blanking_count[8]_i_1/O
+                         net (fo=9, routed)           0.532    18.172    decoder/blanking_count[0]
+    SLICE_X6Y11          FDCE                                         r  decoder/blanking_count_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)   20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000    20.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.652    24.589    decoder/clk_50m_IBUF_BUFG
+    SLICE_X6Y11          FDCE                                         r  decoder/blanking_count_reg[0]/C
+                         clock pessimism              0.458    25.047    
+                         clock uncertainty           -0.035    25.011    
+    SLICE_X6Y11          FDCE (Setup_fdce_C_CE)      -0.169    24.842    decoder/blanking_count_reg[0]
+  -------------------------------------------------------------------
+                         required time                         24.842    
+                         arrival time                         -18.172    
+  -------------------------------------------------------------------
+                         slack                                  6.670    
+
+Slack (MET) :             6.670ns  (required time - arrival time)
+  Source:                 decoder/write_ptr_reg[0]_rep__5/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[1]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_50m rise@20.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        13.154ns  (logic 2.802ns (21.302%)  route 10.352ns (78.698%))
+  Logic Levels:           12  (LUT5=1 LUT6=5 MUXF7=3 MUXF8=3)
+  Clock Path Skew:        0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.589ns = ( 24.589 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.019ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.739     5.019    decoder/clk_50m_IBUF_BUFG
+    SLICE_X18Y21         FDCE                                         r  decoder/write_ptr_reg[0]_rep__5/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y21         FDCE (Prop_fdce_C_Q)         0.518     5.537 r  decoder/write_ptr_reg[0]_rep__5/Q
+                         net (fo=121, routed)         3.380     8.917    decoder/write_ptr_reg[0]_rep__5_n_0
+    SLICE_X46Y55         LUT6 (Prop_lut6_I4_O)        0.124     9.041 r  decoder/seizure_detected_i_1933/O
+                         net (fo=1, routed)           0.000     9.041    decoder/seizure_detected_i_1933_n_0
+    SLICE_X46Y55         MUXF7 (Prop_muxf7_I1_O)      0.247     9.288 r  decoder/seizure_detected_reg_i_914/O
+                         net (fo=1, routed)           0.000     9.288    decoder/seizure_detected_reg_i_914_n_0
+    SLICE_X46Y55         MUXF8 (Prop_muxf8_I0_O)      0.098     9.386 r  decoder/seizure_detected_reg_i_405/O
+                         net (fo=1, routed)           1.228    10.614    decoder/seizure_detected_reg_i_405_n_0
+    SLICE_X42Y46         LUT6 (Prop_lut6_I1_O)        0.319    10.933 r  decoder/seizure_detected_i_151/O
+                         net (fo=1, routed)           0.000    10.933    decoder/seizure_detected_i_151_n_0
+    SLICE_X42Y46         MUXF7 (Prop_muxf7_I1_O)      0.214    11.147 r  decoder/seizure_detected_reg_i_87/O
+                         net (fo=1, routed)           0.000    11.147    decoder/seizure_detected_reg_i_87_n_0
+    SLICE_X42Y46         MUXF8 (Prop_muxf8_I1_O)      0.088    11.235 r  decoder/seizure_detected_reg_i_55/O
+                         net (fo=1, routed)           1.064    12.299    decoder/seizure_detected_reg_i_55_n_0
+    SLICE_X31Y33         LUT6 (Prop_lut6_I5_O)        0.319    12.618 r  decoder/seizure_detected_i_39/O
+                         net (fo=1, routed)           0.000    12.618    decoder/seizure_detected_i_39_n_0
+    SLICE_X31Y33         MUXF7 (Prop_muxf7_I1_O)      0.217    12.835 r  decoder/seizure_detected_reg_i_33/O
+                         net (fo=1, routed)           0.000    12.835    decoder/seizure_detected_reg_i_33_n_0
+    SLICE_X31Y33         MUXF8 (Prop_muxf8_I1_O)      0.094    12.929 r  decoder/seizure_detected_reg_i_20/O
+                         net (fo=13, routed)          1.994    14.923    decoder/write_ptr_reg[11]_0
+    SLICE_X6Y14          LUT5 (Prop_lut5_I2_O)        0.316    15.239 f  decoder/seizure_detected_i_6/O
+                         net (fo=2, routed)           1.182    16.421    decoder/seizure_detected_i_6_n_0
+    SLICE_X10Y13         LUT6 (Prop_lut6_I0_O)        0.124    16.545 f  decoder/blanking_count[8]_i_3/O
+                         net (fo=1, routed)           0.971    17.516    decoder/blanking_count[8]_i_3_n_0
+    SLICE_X6Y12          LUT6 (Prop_lut6_I1_O)        0.124    17.640 r  decoder/blanking_count[8]_i_1/O
+                         net (fo=9, routed)           0.532    18.172    decoder/blanking_count[0]
+    SLICE_X6Y11          FDCE                                         r  decoder/blanking_count_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)   20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000    20.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.652    24.589    decoder/clk_50m_IBUF_BUFG
+    SLICE_X6Y11          FDCE                                         r  decoder/blanking_count_reg[1]/C
+                         clock pessimism              0.458    25.047    
+                         clock uncertainty           -0.035    25.011    
+    SLICE_X6Y11          FDCE (Setup_fdce_C_CE)      -0.169    24.842    decoder/blanking_count_reg[1]
+  -------------------------------------------------------------------
+                         required time                         24.842    
+                         arrival time                         -18.172    
+  -------------------------------------------------------------------
+                         slack                                  6.670    
+
+Slack (MET) :             6.792ns  (required time - arrival time)
+  Source:                 layer2/GEN_NEURON[0].u_neuron/membrane_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__14/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_50m rise@20.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        13.135ns  (logic 2.952ns (22.473%)  route 10.183ns (77.527%))
+  Logic Levels:           10  (CARRY4=7 LUT2=2 LUT3=1)
+  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.506ns = ( 24.506 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.032ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.752     5.032    layer2/GEN_NEURON[0].u_neuron/clk_50m_IBUF_BUFG
+    SLICE_X16Y7          FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/membrane_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X16Y7          FDCE (Prop_fdce_C_Q)         0.518     5.550 r  layer2/GEN_NEURON[0].u_neuron/membrane_reg[1]/Q
+                         net (fo=2, routed)           0.816     6.365    layer2/GEN_NEURON[0].u_neuron/membrane[1]
+    SLICE_X15Y7          LUT2 (Prop_lut2_I0_O)        0.124     6.489 r  layer2/GEN_NEURON[0].u_neuron/membrane_next2_carry_i_3/O
+                         net (fo=1, routed)           0.000     6.489    layer2/GEN_NEURON[0].u_neuron/membrane_next2_carry_i_3_n_0
+    SLICE_X15Y7          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.039 r  layer2/GEN_NEURON[0].u_neuron/membrane_next2_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.039    layer2/GEN_NEURON[0].u_neuron/membrane_next2_carry_n_0
+    SLICE_X15Y8          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.153 r  layer2/GEN_NEURON[0].u_neuron/membrane_next2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.153    layer2/GEN_NEURON[0].u_neuron/membrane_next2_carry__0_n_0
+    SLICE_X15Y9          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.267 r  layer2/GEN_NEURON[0].u_neuron/membrane_next2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.267    layer2/GEN_NEURON[0].u_neuron/membrane_next2_carry__1_n_0
+    SLICE_X15Y10         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.381 r  layer2/GEN_NEURON[0].u_neuron/membrane_next2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     7.381    layer2/GEN_NEURON[0].u_neuron/membrane_next2_carry__2_n_0
+    SLICE_X15Y11         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271     7.652 r  layer2/GEN_NEURON[0].u_neuron/membrane_reg[14]_i_3/CO[0]
+                         net (fo=56, routed)          1.401     9.053    layer2/GEN_NEURON[0].u_neuron/membrane_reg[14]_i_3_n_3
+    SLICE_X16Y8          LUT3 (Prop_lut3_I0_O)        0.373     9.426 r  layer2/GEN_NEURON[0].u_neuron/spike_out0_carry_i_6/O
+                         net (fo=1, routed)           0.000     9.426    layer2/GEN_NEURON[0].u_neuron/spike_out0_carry_i_6_n_0
+    SLICE_X16Y8          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.959 r  layer2/GEN_NEURON[0].u_neuron/spike_out0_carry/CO[3]
+                         net (fo=1, routed)           0.000     9.959    layer2/GEN_NEURON[0].u_neuron/spike_out0_carry_n_0
+    SLICE_X16Y9          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.076 r  layer2/GEN_NEURON[0].u_neuron/spike_out0_carry__0/CO[3]
+                         net (fo=82, routed)          7.967    18.043    layer2/GEN_NEURON[0].u_neuron/spike_out0_carry__0_n_0
+    SLICE_X24Y43         LUT2 (Prop_lut2_I1_O)        0.124    18.167 r  layer2/GEN_NEURON[0].u_neuron/spike_out_rep__14_i_1/O
+                         net (fo=1, routed)           0.000    18.167    layer2/GEN_NEURON[0].u_neuron/spike_out_rep__14_i_1_n_0
+    SLICE_X24Y43         FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__14/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)   20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000    20.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.569    24.506    layer2/GEN_NEURON[0].u_neuron/clk_50m_IBUF_BUFG
+    SLICE_X24Y43         FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__14/C
+                         clock pessimism              0.458    24.964    
+                         clock uncertainty           -0.035    24.928    
+    SLICE_X24Y43         FDCE (Setup_fdce_C_D)        0.031    24.959    layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__14
+  -------------------------------------------------------------------
+                         required time                         24.959    
+                         arrival time                         -18.167    
+  -------------------------------------------------------------------
+                         slack                                  6.792    
+
+Slack (MET) :             6.812ns  (required time - arrival time)
+  Source:                 decoder/write_ptr_reg[0]_rep__5/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[5]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_50m rise@20.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        12.977ns  (logic 2.802ns (21.593%)  route 10.175ns (78.407%))
+  Logic Levels:           12  (LUT5=1 LUT6=5 MUXF7=3 MUXF8=3)
+  Clock Path Skew:        0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.590ns = ( 24.590 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.019ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.739     5.019    decoder/clk_50m_IBUF_BUFG
+    SLICE_X18Y21         FDCE                                         r  decoder/write_ptr_reg[0]_rep__5/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y21         FDCE (Prop_fdce_C_Q)         0.518     5.537 r  decoder/write_ptr_reg[0]_rep__5/Q
+                         net (fo=121, routed)         3.380     8.917    decoder/write_ptr_reg[0]_rep__5_n_0
+    SLICE_X46Y55         LUT6 (Prop_lut6_I4_O)        0.124     9.041 r  decoder/seizure_detected_i_1933/O
+                         net (fo=1, routed)           0.000     9.041    decoder/seizure_detected_i_1933_n_0
+    SLICE_X46Y55         MUXF7 (Prop_muxf7_I1_O)      0.247     9.288 r  decoder/seizure_detected_reg_i_914/O
+                         net (fo=1, routed)           0.000     9.288    decoder/seizure_detected_reg_i_914_n_0
+    SLICE_X46Y55         MUXF8 (Prop_muxf8_I0_O)      0.098     9.386 r  decoder/seizure_detected_reg_i_405/O
+                         net (fo=1, routed)           1.228    10.614    decoder/seizure_detected_reg_i_405_n_0
+    SLICE_X42Y46         LUT6 (Prop_lut6_I1_O)        0.319    10.933 r  decoder/seizure_detected_i_151/O
+                         net (fo=1, routed)           0.000    10.933    decoder/seizure_detected_i_151_n_0
+    SLICE_X42Y46         MUXF7 (Prop_muxf7_I1_O)      0.214    11.147 r  decoder/seizure_detected_reg_i_87/O
+                         net (fo=1, routed)           0.000    11.147    decoder/seizure_detected_reg_i_87_n_0
+    SLICE_X42Y46         MUXF8 (Prop_muxf8_I1_O)      0.088    11.235 r  decoder/seizure_detected_reg_i_55/O
+                         net (fo=1, routed)           1.064    12.299    decoder/seizure_detected_reg_i_55_n_0
+    SLICE_X31Y33         LUT6 (Prop_lut6_I5_O)        0.319    12.618 r  decoder/seizure_detected_i_39/O
+                         net (fo=1, routed)           0.000    12.618    decoder/seizure_detected_i_39_n_0
+    SLICE_X31Y33         MUXF7 (Prop_muxf7_I1_O)      0.217    12.835 r  decoder/seizure_detected_reg_i_33/O
+                         net (fo=1, routed)           0.000    12.835    decoder/seizure_detected_reg_i_33_n_0
+    SLICE_X31Y33         MUXF8 (Prop_muxf8_I1_O)      0.094    12.929 r  decoder/seizure_detected_reg_i_20/O
+                         net (fo=13, routed)          1.994    14.923    decoder/write_ptr_reg[11]_0
+    SLICE_X6Y14          LUT5 (Prop_lut5_I2_O)        0.316    15.239 f  decoder/seizure_detected_i_6/O
+                         net (fo=2, routed)           1.182    16.421    decoder/seizure_detected_i_6_n_0
+    SLICE_X10Y13         LUT6 (Prop_lut6_I0_O)        0.124    16.545 f  decoder/blanking_count[8]_i_3/O
+                         net (fo=1, routed)           0.971    17.516    decoder/blanking_count[8]_i_3_n_0
+    SLICE_X6Y12          LUT6 (Prop_lut6_I1_O)        0.124    17.640 r  decoder/blanking_count[8]_i_1/O
+                         net (fo=9, routed)           0.355    17.995    decoder/blanking_count[0]
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)   20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000    20.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.653    24.590    decoder/clk_50m_IBUF_BUFG
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[5]/C
+                         clock pessimism              0.458    25.048    
+                         clock uncertainty           -0.035    25.012    
+    SLICE_X7Y10          FDCE (Setup_fdce_C_CE)      -0.205    24.807    decoder/blanking_count_reg[5]
+  -------------------------------------------------------------------
+                         required time                         24.807    
+                         arrival time                         -17.995    
+  -------------------------------------------------------------------
+                         slack                                  6.812    
+
+Slack (MET) :             6.812ns  (required time - arrival time)
+  Source:                 decoder/write_ptr_reg[0]_rep__5/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[6]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_50m rise@20.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        12.977ns  (logic 2.802ns (21.593%)  route 10.175ns (78.407%))
+  Logic Levels:           12  (LUT5=1 LUT6=5 MUXF7=3 MUXF8=3)
+  Clock Path Skew:        0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.590ns = ( 24.590 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.019ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.739     5.019    decoder/clk_50m_IBUF_BUFG
+    SLICE_X18Y21         FDCE                                         r  decoder/write_ptr_reg[0]_rep__5/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y21         FDCE (Prop_fdce_C_Q)         0.518     5.537 r  decoder/write_ptr_reg[0]_rep__5/Q
+                         net (fo=121, routed)         3.380     8.917    decoder/write_ptr_reg[0]_rep__5_n_0
+    SLICE_X46Y55         LUT6 (Prop_lut6_I4_O)        0.124     9.041 r  decoder/seizure_detected_i_1933/O
+                         net (fo=1, routed)           0.000     9.041    decoder/seizure_detected_i_1933_n_0
+    SLICE_X46Y55         MUXF7 (Prop_muxf7_I1_O)      0.247     9.288 r  decoder/seizure_detected_reg_i_914/O
+                         net (fo=1, routed)           0.000     9.288    decoder/seizure_detected_reg_i_914_n_0
+    SLICE_X46Y55         MUXF8 (Prop_muxf8_I0_O)      0.098     9.386 r  decoder/seizure_detected_reg_i_405/O
+                         net (fo=1, routed)           1.228    10.614    decoder/seizure_detected_reg_i_405_n_0
+    SLICE_X42Y46         LUT6 (Prop_lut6_I1_O)        0.319    10.933 r  decoder/seizure_detected_i_151/O
+                         net (fo=1, routed)           0.000    10.933    decoder/seizure_detected_i_151_n_0
+    SLICE_X42Y46         MUXF7 (Prop_muxf7_I1_O)      0.214    11.147 r  decoder/seizure_detected_reg_i_87/O
+                         net (fo=1, routed)           0.000    11.147    decoder/seizure_detected_reg_i_87_n_0
+    SLICE_X42Y46         MUXF8 (Prop_muxf8_I1_O)      0.088    11.235 r  decoder/seizure_detected_reg_i_55/O
+                         net (fo=1, routed)           1.064    12.299    decoder/seizure_detected_reg_i_55_n_0
+    SLICE_X31Y33         LUT6 (Prop_lut6_I5_O)        0.319    12.618 r  decoder/seizure_detected_i_39/O
+                         net (fo=1, routed)           0.000    12.618    decoder/seizure_detected_i_39_n_0
+    SLICE_X31Y33         MUXF7 (Prop_muxf7_I1_O)      0.217    12.835 r  decoder/seizure_detected_reg_i_33/O
+                         net (fo=1, routed)           0.000    12.835    decoder/seizure_detected_reg_i_33_n_0
+    SLICE_X31Y33         MUXF8 (Prop_muxf8_I1_O)      0.094    12.929 r  decoder/seizure_detected_reg_i_20/O
+                         net (fo=13, routed)          1.994    14.923    decoder/write_ptr_reg[11]_0
+    SLICE_X6Y14          LUT5 (Prop_lut5_I2_O)        0.316    15.239 f  decoder/seizure_detected_i_6/O
+                         net (fo=2, routed)           1.182    16.421    decoder/seizure_detected_i_6_n_0
+    SLICE_X10Y13         LUT6 (Prop_lut6_I0_O)        0.124    16.545 f  decoder/blanking_count[8]_i_3/O
+                         net (fo=1, routed)           0.971    17.516    decoder/blanking_count[8]_i_3_n_0
+    SLICE_X6Y12          LUT6 (Prop_lut6_I1_O)        0.124    17.640 r  decoder/blanking_count[8]_i_1/O
+                         net (fo=9, routed)           0.355    17.995    decoder/blanking_count[0]
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)   20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000    20.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.653    24.590    decoder/clk_50m_IBUF_BUFG
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[6]/C
+                         clock pessimism              0.458    25.048    
+                         clock uncertainty           -0.035    25.012    
+    SLICE_X7Y10          FDCE (Setup_fdce_C_CE)      -0.205    24.807    decoder/blanking_count_reg[6]
+  -------------------------------------------------------------------
+                         required time                         24.807    
+                         arrival time                         -17.995    
+  -------------------------------------------------------------------
+                         slack                                  6.812    
+
+Slack (MET) :             6.812ns  (required time - arrival time)
+  Source:                 decoder/write_ptr_reg[0]_rep__5/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[7]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_50m rise@20.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        12.977ns  (logic 2.802ns (21.593%)  route 10.175ns (78.407%))
+  Logic Levels:           12  (LUT5=1 LUT6=5 MUXF7=3 MUXF8=3)
+  Clock Path Skew:        0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.590ns = ( 24.590 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.019ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.739     5.019    decoder/clk_50m_IBUF_BUFG
+    SLICE_X18Y21         FDCE                                         r  decoder/write_ptr_reg[0]_rep__5/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y21         FDCE (Prop_fdce_C_Q)         0.518     5.537 r  decoder/write_ptr_reg[0]_rep__5/Q
+                         net (fo=121, routed)         3.380     8.917    decoder/write_ptr_reg[0]_rep__5_n_0
+    SLICE_X46Y55         LUT6 (Prop_lut6_I4_O)        0.124     9.041 r  decoder/seizure_detected_i_1933/O
+                         net (fo=1, routed)           0.000     9.041    decoder/seizure_detected_i_1933_n_0
+    SLICE_X46Y55         MUXF7 (Prop_muxf7_I1_O)      0.247     9.288 r  decoder/seizure_detected_reg_i_914/O
+                         net (fo=1, routed)           0.000     9.288    decoder/seizure_detected_reg_i_914_n_0
+    SLICE_X46Y55         MUXF8 (Prop_muxf8_I0_O)      0.098     9.386 r  decoder/seizure_detected_reg_i_405/O
+                         net (fo=1, routed)           1.228    10.614    decoder/seizure_detected_reg_i_405_n_0
+    SLICE_X42Y46         LUT6 (Prop_lut6_I1_O)        0.319    10.933 r  decoder/seizure_detected_i_151/O
+                         net (fo=1, routed)           0.000    10.933    decoder/seizure_detected_i_151_n_0
+    SLICE_X42Y46         MUXF7 (Prop_muxf7_I1_O)      0.214    11.147 r  decoder/seizure_detected_reg_i_87/O
+                         net (fo=1, routed)           0.000    11.147    decoder/seizure_detected_reg_i_87_n_0
+    SLICE_X42Y46         MUXF8 (Prop_muxf8_I1_O)      0.088    11.235 r  decoder/seizure_detected_reg_i_55/O
+                         net (fo=1, routed)           1.064    12.299    decoder/seizure_detected_reg_i_55_n_0
+    SLICE_X31Y33         LUT6 (Prop_lut6_I5_O)        0.319    12.618 r  decoder/seizure_detected_i_39/O
+                         net (fo=1, routed)           0.000    12.618    decoder/seizure_detected_i_39_n_0
+    SLICE_X31Y33         MUXF7 (Prop_muxf7_I1_O)      0.217    12.835 r  decoder/seizure_detected_reg_i_33/O
+                         net (fo=1, routed)           0.000    12.835    decoder/seizure_detected_reg_i_33_n_0
+    SLICE_X31Y33         MUXF8 (Prop_muxf8_I1_O)      0.094    12.929 r  decoder/seizure_detected_reg_i_20/O
+                         net (fo=13, routed)          1.994    14.923    decoder/write_ptr_reg[11]_0
+    SLICE_X6Y14          LUT5 (Prop_lut5_I2_O)        0.316    15.239 f  decoder/seizure_detected_i_6/O
+                         net (fo=2, routed)           1.182    16.421    decoder/seizure_detected_i_6_n_0
+    SLICE_X10Y13         LUT6 (Prop_lut6_I0_O)        0.124    16.545 f  decoder/blanking_count[8]_i_3/O
+                         net (fo=1, routed)           0.971    17.516    decoder/blanking_count[8]_i_3_n_0
+    SLICE_X6Y12          LUT6 (Prop_lut6_I1_O)        0.124    17.640 r  decoder/blanking_count[8]_i_1/O
+                         net (fo=9, routed)           0.355    17.995    decoder/blanking_count[0]
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)   20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000    20.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.653    24.590    decoder/clk_50m_IBUF_BUFG
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[7]/C
+                         clock pessimism              0.458    25.048    
+                         clock uncertainty           -0.035    25.012    
+    SLICE_X7Y10          FDCE (Setup_fdce_C_CE)      -0.205    24.807    decoder/blanking_count_reg[7]
+  -------------------------------------------------------------------
+                         required time                         24.807    
+                         arrival time                         -17.995    
+  -------------------------------------------------------------------
+                         slack                                  6.812    
+
+Slack (MET) :             6.812ns  (required time - arrival time)
+  Source:                 decoder/write_ptr_reg[0]_rep__5/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[8]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_50m rise@20.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        12.977ns  (logic 2.802ns (21.593%)  route 10.175ns (78.407%))
+  Logic Levels:           12  (LUT5=1 LUT6=5 MUXF7=3 MUXF8=3)
+  Clock Path Skew:        0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.590ns = ( 24.590 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.019ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.739     5.019    decoder/clk_50m_IBUF_BUFG
+    SLICE_X18Y21         FDCE                                         r  decoder/write_ptr_reg[0]_rep__5/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y21         FDCE (Prop_fdce_C_Q)         0.518     5.537 r  decoder/write_ptr_reg[0]_rep__5/Q
+                         net (fo=121, routed)         3.380     8.917    decoder/write_ptr_reg[0]_rep__5_n_0
+    SLICE_X46Y55         LUT6 (Prop_lut6_I4_O)        0.124     9.041 r  decoder/seizure_detected_i_1933/O
+                         net (fo=1, routed)           0.000     9.041    decoder/seizure_detected_i_1933_n_0
+    SLICE_X46Y55         MUXF7 (Prop_muxf7_I1_O)      0.247     9.288 r  decoder/seizure_detected_reg_i_914/O
+                         net (fo=1, routed)           0.000     9.288    decoder/seizure_detected_reg_i_914_n_0
+    SLICE_X46Y55         MUXF8 (Prop_muxf8_I0_O)      0.098     9.386 r  decoder/seizure_detected_reg_i_405/O
+                         net (fo=1, routed)           1.228    10.614    decoder/seizure_detected_reg_i_405_n_0
+    SLICE_X42Y46         LUT6 (Prop_lut6_I1_O)        0.319    10.933 r  decoder/seizure_detected_i_151/O
+                         net (fo=1, routed)           0.000    10.933    decoder/seizure_detected_i_151_n_0
+    SLICE_X42Y46         MUXF7 (Prop_muxf7_I1_O)      0.214    11.147 r  decoder/seizure_detected_reg_i_87/O
+                         net (fo=1, routed)           0.000    11.147    decoder/seizure_detected_reg_i_87_n_0
+    SLICE_X42Y46         MUXF8 (Prop_muxf8_I1_O)      0.088    11.235 r  decoder/seizure_detected_reg_i_55/O
+                         net (fo=1, routed)           1.064    12.299    decoder/seizure_detected_reg_i_55_n_0
+    SLICE_X31Y33         LUT6 (Prop_lut6_I5_O)        0.319    12.618 r  decoder/seizure_detected_i_39/O
+                         net (fo=1, routed)           0.000    12.618    decoder/seizure_detected_i_39_n_0
+    SLICE_X31Y33         MUXF7 (Prop_muxf7_I1_O)      0.217    12.835 r  decoder/seizure_detected_reg_i_33/O
+                         net (fo=1, routed)           0.000    12.835    decoder/seizure_detected_reg_i_33_n_0
+    SLICE_X31Y33         MUXF8 (Prop_muxf8_I1_O)      0.094    12.929 r  decoder/seizure_detected_reg_i_20/O
+                         net (fo=13, routed)          1.994    14.923    decoder/write_ptr_reg[11]_0
+    SLICE_X6Y14          LUT5 (Prop_lut5_I2_O)        0.316    15.239 f  decoder/seizure_detected_i_6/O
+                         net (fo=2, routed)           1.182    16.421    decoder/seizure_detected_i_6_n_0
+    SLICE_X10Y13         LUT6 (Prop_lut6_I0_O)        0.124    16.545 f  decoder/blanking_count[8]_i_3/O
+                         net (fo=1, routed)           0.971    17.516    decoder/blanking_count[8]_i_3_n_0
+    SLICE_X6Y12          LUT6 (Prop_lut6_I1_O)        0.124    17.640 r  decoder/blanking_count[8]_i_1/O
+                         net (fo=9, routed)           0.355    17.995    decoder/blanking_count[0]
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[8]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)   20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000    20.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.653    24.590    decoder/clk_50m_IBUF_BUFG
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[8]/C
+                         clock pessimism              0.458    25.048    
+                         clock uncertainty           -0.035    25.012    
+    SLICE_X7Y10          FDCE (Setup_fdce_C_CE)      -0.205    24.807    decoder/blanking_count_reg[8]
+  -------------------------------------------------------------------
+                         required time                         24.807    
+                         arrival time                         -17.995    
+  -------------------------------------------------------------------
+                         slack                                  6.812    
+
+Slack (MET) :             6.848ns  (required time - arrival time)
+  Source:                 decoder/write_ptr_reg[0]_rep__5/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[2]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_50m rise@20.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        12.977ns  (logic 2.802ns (21.593%)  route 10.175ns (78.407%))
+  Logic Levels:           12  (LUT5=1 LUT6=5 MUXF7=3 MUXF8=3)
+  Clock Path Skew:        0.029ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.590ns = ( 24.590 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.019ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.739     5.019    decoder/clk_50m_IBUF_BUFG
+    SLICE_X18Y21         FDCE                                         r  decoder/write_ptr_reg[0]_rep__5/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X18Y21         FDCE (Prop_fdce_C_Q)         0.518     5.537 r  decoder/write_ptr_reg[0]_rep__5/Q
+                         net (fo=121, routed)         3.380     8.917    decoder/write_ptr_reg[0]_rep__5_n_0
+    SLICE_X46Y55         LUT6 (Prop_lut6_I4_O)        0.124     9.041 r  decoder/seizure_detected_i_1933/O
+                         net (fo=1, routed)           0.000     9.041    decoder/seizure_detected_i_1933_n_0
+    SLICE_X46Y55         MUXF7 (Prop_muxf7_I1_O)      0.247     9.288 r  decoder/seizure_detected_reg_i_914/O
+                         net (fo=1, routed)           0.000     9.288    decoder/seizure_detected_reg_i_914_n_0
+    SLICE_X46Y55         MUXF8 (Prop_muxf8_I0_O)      0.098     9.386 r  decoder/seizure_detected_reg_i_405/O
+                         net (fo=1, routed)           1.228    10.614    decoder/seizure_detected_reg_i_405_n_0
+    SLICE_X42Y46         LUT6 (Prop_lut6_I1_O)        0.319    10.933 r  decoder/seizure_detected_i_151/O
+                         net (fo=1, routed)           0.000    10.933    decoder/seizure_detected_i_151_n_0
+    SLICE_X42Y46         MUXF7 (Prop_muxf7_I1_O)      0.214    11.147 r  decoder/seizure_detected_reg_i_87/O
+                         net (fo=1, routed)           0.000    11.147    decoder/seizure_detected_reg_i_87_n_0
+    SLICE_X42Y46         MUXF8 (Prop_muxf8_I1_O)      0.088    11.235 r  decoder/seizure_detected_reg_i_55/O
+                         net (fo=1, routed)           1.064    12.299    decoder/seizure_detected_reg_i_55_n_0
+    SLICE_X31Y33         LUT6 (Prop_lut6_I5_O)        0.319    12.618 r  decoder/seizure_detected_i_39/O
+                         net (fo=1, routed)           0.000    12.618    decoder/seizure_detected_i_39_n_0
+    SLICE_X31Y33         MUXF7 (Prop_muxf7_I1_O)      0.217    12.835 r  decoder/seizure_detected_reg_i_33/O
+                         net (fo=1, routed)           0.000    12.835    decoder/seizure_detected_reg_i_33_n_0
+    SLICE_X31Y33         MUXF8 (Prop_muxf8_I1_O)      0.094    12.929 r  decoder/seizure_detected_reg_i_20/O
+                         net (fo=13, routed)          1.994    14.923    decoder/write_ptr_reg[11]_0
+    SLICE_X6Y14          LUT5 (Prop_lut5_I2_O)        0.316    15.239 f  decoder/seizure_detected_i_6/O
+                         net (fo=2, routed)           1.182    16.421    decoder/seizure_detected_i_6_n_0
+    SLICE_X10Y13         LUT6 (Prop_lut6_I0_O)        0.124    16.545 f  decoder/blanking_count[8]_i_3/O
+                         net (fo=1, routed)           0.971    17.516    decoder/blanking_count[8]_i_3_n_0
+    SLICE_X6Y12          LUT6 (Prop_lut6_I1_O)        0.124    17.640 r  decoder/blanking_count[8]_i_1/O
+                         net (fo=9, routed)           0.355    17.995    decoder/blanking_count[0]
+    SLICE_X6Y10          FDCE                                         r  decoder/blanking_count_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)   20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000    20.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.653    24.590    decoder/clk_50m_IBUF_BUFG
+    SLICE_X6Y10          FDCE                                         r  decoder/blanking_count_reg[2]/C
+                         clock pessimism              0.458    25.048    
+                         clock uncertainty           -0.035    25.012    
+    SLICE_X6Y10          FDCE (Setup_fdce_C_CE)      -0.169    24.843    decoder/blanking_count_reg[2]
+  -------------------------------------------------------------------
+                         required time                         24.843    
+                         arrival time                         -17.995    
+  -------------------------------------------------------------------
+                         slack                                  6.848    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.136ns  (arrival time - required time)
+  Source:                 layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__26/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[1734]/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_50m rise@0.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        0.508ns  (logic 0.209ns (41.171%)  route 0.299ns (58.829%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.250ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.002ns
+    Source Clock Delay      (SCD):    1.504ns
+    Clock Pessimism Removal (CPR):    0.248ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.579     1.504    layer2/GEN_NEURON[0].u_neuron/clk_50m_IBUF_BUFG
+    SLICE_X30Y50         FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__26/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X30Y50         FDCE (Prop_fdce_C_Q)         0.164     1.668 r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__26/Q
+                         net (fo=64, routed)          0.299     1.966    decoder/spike_history_reg[1791]_0
+    SLICE_X32Y49         LUT4 (Prop_lut4_I0_O)        0.045     2.011 r  decoder/spike_history[1734]_i_1/O
+                         net (fo=1, routed)           0.000     2.011    decoder/spike_history[1734]_i_1_n_0
+    SLICE_X32Y49         FDCE                                         r  decoder/spike_history_reg[1734]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.829     2.002    decoder/clk_50m_IBUF_BUFG
+    SLICE_X32Y49         FDCE                                         r  decoder/spike_history_reg[1734]/C
+                         clock pessimism             -0.248     1.754    
+    SLICE_X32Y49         FDCE (Hold_fdce_C_D)         0.121     1.875    decoder/spike_history_reg[1734]
+  -------------------------------------------------------------------
+                         required time                         -1.875    
+                         arrival time                           2.011    
+  -------------------------------------------------------------------
+                         slack                                  0.136    
+
+Slack (MET) :             0.169ns  (arrival time - required time)
+  Source:                 layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__62/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[4058]/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_50m rise@0.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        0.303ns  (logic 0.186ns (61.473%)  route 0.117ns (38.527%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.020ns
+    Source Clock Delay      (SCD):    1.506ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.581     1.506    layer2/GEN_NEURON[0].u_neuron/clk_50m_IBUF_BUFG
+    SLICE_X13Y24         FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__62/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y24         FDCE (Prop_fdce_C_Q)         0.141     1.647 r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__62/Q
+                         net (fo=64, routed)          0.117     1.763    decoder/spike_history_reg[4095]_0
+    SLICE_X12Y24         LUT4 (Prop_lut4_I0_O)        0.045     1.808 r  decoder/spike_history[4058]_i_1/O
+                         net (fo=1, routed)           0.000     1.808    decoder/spike_history[4058]_i_1_n_0
+    SLICE_X12Y24         FDCE                                         r  decoder/spike_history_reg[4058]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.847     2.020    decoder/clk_50m_IBUF_BUFG
+    SLICE_X12Y24         FDCE                                         r  decoder/spike_history_reg[4058]/C
+                         clock pessimism             -0.502     1.519    
+    SLICE_X12Y24         FDCE (Hold_fdce_C_D)         0.121     1.640    decoder/spike_history_reg[4058]
+  -------------------------------------------------------------------
+                         required time                         -1.640    
+                         arrival time                           1.808    
+  -------------------------------------------------------------------
+                         slack                                  0.169    
+
+Slack (MET) :             0.173ns  (arrival time - required time)
+  Source:                 layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__56/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[3695]/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_50m rise@0.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        0.307ns  (logic 0.186ns (60.615%)  route 0.121ns (39.385%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.025ns
+    Source Clock Delay      (SCD):    1.510ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.585     1.510    layer2/GEN_NEURON[0].u_neuron/clk_50m_IBUF_BUFG
+    SLICE_X21Y19         FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__56/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X21Y19         FDCE (Prop_fdce_C_Q)         0.141     1.651 r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__56/Q
+                         net (fo=64, routed)          0.121     1.772    decoder/spike_history_reg[3711]_0
+    SLICE_X20Y19         LUT4 (Prop_lut4_I0_O)        0.045     1.817 r  decoder/spike_history[3695]_i_1/O
+                         net (fo=1, routed)           0.000     1.817    decoder/spike_history[3695]_i_1_n_0
+    SLICE_X20Y19         FDCE                                         r  decoder/spike_history_reg[3695]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.852     2.025    decoder/clk_50m_IBUF_BUFG
+    SLICE_X20Y19         FDCE                                         r  decoder/spike_history_reg[3695]/C
+                         clock pessimism             -0.503     1.523    
+    SLICE_X20Y19         FDCE (Hold_fdce_C_D)         0.121     1.644    decoder/spike_history_reg[3695]
+  -------------------------------------------------------------------
+                         required time                         -1.644    
+                         arrival time                           1.817    
+  -------------------------------------------------------------------
+                         slack                                  0.173    
+
+Slack (MET) :             0.175ns  (arrival time - required time)
+  Source:                 layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__56/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[3692]/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_50m rise@0.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        0.309ns  (logic 0.186ns (60.223%)  route 0.123ns (39.777%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.025ns
+    Source Clock Delay      (SCD):    1.510ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.585     1.510    layer2/GEN_NEURON[0].u_neuron/clk_50m_IBUF_BUFG
+    SLICE_X21Y19         FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__56/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X21Y19         FDCE (Prop_fdce_C_Q)         0.141     1.651 r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__56/Q
+                         net (fo=64, routed)          0.123     1.774    decoder/spike_history_reg[3711]_0
+    SLICE_X20Y19         LUT4 (Prop_lut4_I0_O)        0.045     1.819 r  decoder/spike_history[3692]_i_1/O
+                         net (fo=1, routed)           0.000     1.819    decoder/spike_history[3692]_i_1_n_0
+    SLICE_X20Y19         FDCE                                         r  decoder/spike_history_reg[3692]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.852     2.025    decoder/clk_50m_IBUF_BUFG
+    SLICE_X20Y19         FDCE                                         r  decoder/spike_history_reg[3692]/C
+                         clock pessimism             -0.503     1.523    
+    SLICE_X20Y19         FDCE (Hold_fdce_C_D)         0.121     1.644    decoder/spike_history_reg[3692]
+  -------------------------------------------------------------------
+                         required time                         -1.644    
+                         arrival time                           1.819    
+  -------------------------------------------------------------------
+                         slack                                  0.175    
+
+Slack (MET) :             0.176ns  (arrival time - required time)
+  Source:                 encoder/spike_valid_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            FSM_sequential_state_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_50m rise@0.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        0.296ns  (logic 0.213ns (71.934%)  route 0.083ns (28.066%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.061ns
+    Source Clock Delay      (SCD):    1.545ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.620     1.545    encoder/clk_50m_IBUF_BUFG
+    SLICE_X4Y12          FDCE                                         r  encoder/spike_valid_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y12          FDCE (Prop_fdce_C_Q)         0.164     1.709 r  encoder/spike_valid_reg/Q
+                         net (fo=2, routed)           0.083     1.792    encoder/encoder_valid
+    SLICE_X5Y12          LUT4 (Prop_lut4_I1_O)        0.049     1.841 r  encoder/FSM_sequential_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.841    encoder_n_1
+    SLICE_X5Y12          FDCE                                         r  FSM_sequential_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.888     2.061    clk_50m_IBUF_BUFG
+    SLICE_X5Y12          FDCE                                         r  FSM_sequential_state_reg[1]/C
+                         clock pessimism             -0.504     1.558    
+    SLICE_X5Y12          FDCE (Hold_fdce_C_D)         0.107     1.665    FSM_sequential_state_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.665    
+                         arrival time                           1.841    
+  -------------------------------------------------------------------
+                         slack                                  0.176    
+
+Slack (MET) :             0.187ns  (arrival time - required time)
+  Source:                 encoder/spike_valid_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            FSM_sequential_state_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_50m rise@0.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        0.292ns  (logic 0.209ns (71.550%)  route 0.083ns (28.450%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.061ns
+    Source Clock Delay      (SCD):    1.545ns
+    Clock Pessimism Removal (CPR):    0.504ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.620     1.545    encoder/clk_50m_IBUF_BUFG
+    SLICE_X4Y12          FDCE                                         r  encoder/spike_valid_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y12          FDCE (Prop_fdce_C_Q)         0.164     1.709 f  encoder/spike_valid_reg/Q
+                         net (fo=2, routed)           0.083     1.792    encoder/encoder_valid
+    SLICE_X5Y12          LUT5 (Prop_lut5_I1_O)        0.045     1.837 r  encoder/FSM_sequential_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     1.837    encoder_n_0
+    SLICE_X5Y12          FDCE                                         r  FSM_sequential_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.888     2.061    clk_50m_IBUF_BUFG
+    SLICE_X5Y12          FDCE                                         r  FSM_sequential_state_reg[0]/C
+                         clock pessimism             -0.504     1.558    
+    SLICE_X5Y12          FDCE (Hold_fdce_C_D)         0.092     1.650    FSM_sequential_state_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.650    
+                         arrival time                           1.837    
+  -------------------------------------------------------------------
+                         slack                                  0.187    
+
+Slack (MET) :             0.196ns  (arrival time - required time)
+  Source:                 layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__10/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[729]/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_50m rise@0.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        0.331ns  (logic 0.186ns (56.187%)  route 0.145ns (43.813%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.990ns
+    Source Clock Delay      (SCD):    1.477ns
+    Clock Pessimism Removal (CPR):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.552     1.477    layer2/GEN_NEURON[0].u_neuron/clk_50m_IBUF_BUFG
+    SLICE_X45Y30         FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__10/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y30         FDCE (Prop_fdce_C_Q)         0.141     1.618 r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__10/Q
+                         net (fo=64, routed)          0.145     1.763    decoder/spike_history_reg[767]_0
+    SLICE_X46Y30         LUT4 (Prop_lut4_I0_O)        0.045     1.808 r  decoder/spike_history[729]_i_1/O
+                         net (fo=1, routed)           0.000     1.808    decoder/spike_history[729]_i_1_n_0
+    SLICE_X46Y30         FDCE                                         r  decoder/spike_history_reg[729]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.817     1.990    decoder/clk_50m_IBUF_BUFG
+    SLICE_X46Y30         FDCE                                         r  decoder/spike_history_reg[729]/C
+                         clock pessimism             -0.500     1.491    
+    SLICE_X46Y30         FDCE (Hold_fdce_C_D)         0.121     1.612    decoder/spike_history_reg[729]
+  -------------------------------------------------------------------
+                         required time                         -1.612    
+                         arrival time                           1.808    
+  -------------------------------------------------------------------
+                         slack                                  0.196    
+
+Slack (MET) :             0.198ns  (arrival time - required time)
+  Source:                 layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__60/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[3953]/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_50m rise@0.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        0.331ns  (logic 0.186ns (56.236%)  route 0.145ns (43.764%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.029ns
+    Source Clock Delay      (SCD):    1.514ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.589     1.514    layer2/GEN_NEURON[0].u_neuron/clk_50m_IBUF_BUFG
+    SLICE_X13Y16         FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__60/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y16         FDCE (Prop_fdce_C_Q)         0.141     1.655 r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__60/Q
+                         net (fo=64, routed)          0.145     1.799    decoder/spike_history_reg[3967]_0
+    SLICE_X12Y16         LUT4 (Prop_lut4_I0_O)        0.045     1.844 r  decoder/spike_history[3953]_i_1/O
+                         net (fo=1, routed)           0.000     1.844    decoder/spike_history[3953]_i_1_n_0
+    SLICE_X12Y16         FDCE                                         r  decoder/spike_history_reg[3953]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.856     2.029    decoder/clk_50m_IBUF_BUFG
+    SLICE_X12Y16         FDCE                                         r  decoder/spike_history_reg[3953]/C
+                         clock pessimism             -0.503     1.527    
+    SLICE_X12Y16         FDCE (Hold_fdce_C_D)         0.120     1.647    decoder/spike_history_reg[3953]
+  -------------------------------------------------------------------
+                         required time                         -1.647    
+                         arrival time                           1.844    
+  -------------------------------------------------------------------
+                         slack                                  0.198    
+
+Slack (MET) :             0.198ns  (arrival time - required time)
+  Source:                 layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__10/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[723]/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_50m rise@0.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        0.333ns  (logic 0.186ns (55.850%)  route 0.147ns (44.150%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.990ns
+    Source Clock Delay      (SCD):    1.477ns
+    Clock Pessimism Removal (CPR):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.552     1.477    layer2/GEN_NEURON[0].u_neuron/clk_50m_IBUF_BUFG
+    SLICE_X45Y30         FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__10/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y30         FDCE (Prop_fdce_C_Q)         0.141     1.618 r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__10/Q
+                         net (fo=64, routed)          0.147     1.765    decoder/spike_history_reg[767]_0
+    SLICE_X46Y30         LUT4 (Prop_lut4_I0_O)        0.045     1.810 r  decoder/spike_history[723]_i_1/O
+                         net (fo=1, routed)           0.000     1.810    decoder/spike_history[723]_i_1_n_0
+    SLICE_X46Y30         FDCE                                         r  decoder/spike_history_reg[723]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.817     1.990    decoder/clk_50m_IBUF_BUFG
+    SLICE_X46Y30         FDCE                                         r  decoder/spike_history_reg[723]/C
+                         clock pessimism             -0.500     1.491    
+    SLICE_X46Y30         FDCE (Hold_fdce_C_D)         0.121     1.612    decoder/spike_history_reg[723]
+  -------------------------------------------------------------------
+                         required time                         -1.612    
+                         arrival time                           1.810    
+  -------------------------------------------------------------------
+                         slack                                  0.198    
+
+Slack (MET) :             0.198ns  (arrival time - required time)
+  Source:                 layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__10/C
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[724]/D
+                            (rising edge-triggered cell FDCE clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_50m
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_50m rise@0.000ns - clk_50m rise@0.000ns)
+  Data Path Delay:        0.333ns  (logic 0.186ns (55.850%)  route 0.147ns (44.150%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.990ns
+    Source Clock Delay      (SCD):    1.477ns
+    Clock Pessimism Removal (CPR):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.552     1.477    layer2/GEN_NEURON[0].u_neuron/clk_50m_IBUF_BUFG
+    SLICE_X45Y30         FDCE                                         r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__10/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y30         FDCE (Prop_fdce_C_Q)         0.141     1.618 r  layer2/GEN_NEURON[0].u_neuron/spike_out_reg_rep__10/Q
+                         net (fo=64, routed)          0.147     1.765    decoder/spike_history_reg[767]_0
+    SLICE_X46Y30         LUT4 (Prop_lut4_I0_O)        0.045     1.810 r  decoder/spike_history[724]_i_1/O
+                         net (fo=1, routed)           0.000     1.810    decoder/spike_history[724]_i_1_n_0
+    SLICE_X46Y30         FDCE                                         r  decoder/spike_history_reg[724]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.817     1.990    decoder/clk_50m_IBUF_BUFG
+    SLICE_X46Y30         FDCE                                         r  decoder/spike_history_reg[724]/C
+                         clock pessimism             -0.500     1.491    
+    SLICE_X46Y30         FDCE (Hold_fdce_C_D)         0.121     1.612    decoder/spike_history_reg[724]
+  -------------------------------------------------------------------
+                         required time                         -1.612    
+                         arrival time                           1.810    
+  -------------------------------------------------------------------
+                         slack                                  0.198    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_50m
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { clk_50m }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         20.000      17.845     BUFGCTRL_X0Y0  clk_50m_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X5Y12    FSM_sequential_state_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X5Y12    FSM_sequential_state_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X5Y12    FSM_sequential_state_reg[2]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X5Y12    decoder_enable_reg/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X5Y12    layer2_enable_reg/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X6Y11    decoder/blanking_count_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X6Y11    decoder/blanking_count_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X6Y10    decoder/blanking_count_reg[2]/C
+Min Period        n/a     FDCE/C   n/a            1.000         20.000      19.000     SLICE_X6Y10    decoder/blanking_count_reg[3]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[0]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[0]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[1]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[1]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[2]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[2]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    decoder_enable_reg/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    decoder_enable_reg/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    layer2_enable_reg/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    layer2_enable_reg/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[0]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[1]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[1]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[2]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    FSM_sequential_state_reg[2]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    decoder_enable_reg/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    decoder_enable_reg/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    layer2_enable_reg/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         10.000      9.500      SLICE_X5Y12    layer2_enable_reg/C
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  clk_50m
+  To Clock:  clk_50m
+
+Max Delay          4240 Endpoints
+Min Delay          4240 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[2145]/CLR
+                            (recovery check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        18.584ns  (logic 1.059ns (5.701%)  route 17.525ns (94.299%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            8.000ns
+  Clock Path Skew:        4.418ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.418ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  8.000     8.000    
+    W6                                                0.000     8.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     8.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.935     8.935 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.057     9.992    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.124    10.116 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)       16.468    26.584    decoder/rst_n
+    SLICE_X38Y30         FDCE                                         f  decoder/spike_history_reg[2145]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874     0.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     2.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.481     4.418    decoder/clk_50m_IBUF_BUFG
+    SLICE_X38Y30         FDCE                                         r  decoder/spike_history_reg[2145]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[2151]/CLR
+                            (recovery check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        18.584ns  (logic 1.059ns (5.701%)  route 17.525ns (94.299%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            8.000ns
+  Clock Path Skew:        4.418ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.418ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  8.000     8.000    
+    W6                                                0.000     8.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     8.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.935     8.935 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.057     9.992    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.124    10.116 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)       16.468    26.584    decoder/rst_n
+    SLICE_X38Y30         FDCE                                         f  decoder/spike_history_reg[2151]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874     0.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     2.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.481     4.418    decoder/clk_50m_IBUF_BUFG
+    SLICE_X38Y30         FDCE                                         r  decoder/spike_history_reg[2151]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[2156]/CLR
+                            (recovery check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        18.584ns  (logic 1.059ns (5.701%)  route 17.525ns (94.299%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            8.000ns
+  Clock Path Skew:        4.418ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.418ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  8.000     8.000    
+    W6                                                0.000     8.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     8.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.935     8.935 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.057     9.992    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.124    10.116 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)       16.468    26.584    decoder/rst_n
+    SLICE_X38Y30         FDCE                                         f  decoder/spike_history_reg[2156]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874     0.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     2.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.481     4.418    decoder/clk_50m_IBUF_BUFG
+    SLICE_X38Y30         FDCE                                         r  decoder/spike_history_reg[2156]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[646]/CLR
+                            (recovery check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        18.584ns  (logic 1.059ns (5.701%)  route 17.525ns (94.299%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            8.000ns
+  Clock Path Skew:        4.418ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.418ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  8.000     8.000    
+    W6                                                0.000     8.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     8.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.935     8.935 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.057     9.992    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.124    10.116 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)       16.468    26.584    decoder/rst_n
+    SLICE_X39Y30         FDCE                                         f  decoder/spike_history_reg[646]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874     0.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     2.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.481     4.418    decoder/clk_50m_IBUF_BUFG
+    SLICE_X39Y30         FDCE                                         r  decoder/spike_history_reg[646]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[647]/CLR
+                            (recovery check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        18.584ns  (logic 1.059ns (5.701%)  route 17.525ns (94.299%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            8.000ns
+  Clock Path Skew:        4.418ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.418ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  8.000     8.000    
+    W6                                                0.000     8.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     8.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.935     8.935 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.057     9.992    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.124    10.116 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)       16.468    26.584    decoder/rst_n
+    SLICE_X39Y30         FDCE                                         f  decoder/spike_history_reg[647]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874     0.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     2.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.481     4.418    decoder/clk_50m_IBUF_BUFG
+    SLICE_X39Y30         FDCE                                         r  decoder/spike_history_reg[647]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[649]/CLR
+                            (recovery check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        18.584ns  (logic 1.059ns (5.701%)  route 17.525ns (94.299%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            8.000ns
+  Clock Path Skew:        4.418ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.418ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  8.000     8.000    
+    W6                                                0.000     8.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     8.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.935     8.935 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.057     9.992    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.124    10.116 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)       16.468    26.584    decoder/rst_n
+    SLICE_X39Y30         FDCE                                         f  decoder/spike_history_reg[649]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874     0.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     2.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.481     4.418    decoder/clk_50m_IBUF_BUFG
+    SLICE_X39Y30         FDCE                                         r  decoder/spike_history_reg[649]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[652]/CLR
+                            (recovery check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        18.584ns  (logic 1.059ns (5.701%)  route 17.525ns (94.299%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            8.000ns
+  Clock Path Skew:        4.418ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.418ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  8.000     8.000    
+    W6                                                0.000     8.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     8.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.935     8.935 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.057     9.992    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.124    10.116 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)       16.468    26.584    decoder/rst_n
+    SLICE_X39Y30         FDCE                                         f  decoder/spike_history_reg[652]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874     0.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     2.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.481     4.418    decoder/clk_50m_IBUF_BUFG
+    SLICE_X39Y30         FDCE                                         r  decoder/spike_history_reg[652]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[225]/CLR
+                            (recovery check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        18.488ns  (logic 1.059ns (5.730%)  route 17.429ns (94.270%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            8.000ns
+  Clock Path Skew:        4.404ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.404ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  8.000     8.000    
+    W6                                                0.000     8.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     8.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.935     8.935 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.057     9.992    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.124    10.116 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)       16.372    26.488    decoder/rst_n
+    SLICE_X50Y21         FDCE                                         f  decoder/spike_history_reg[225]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874     0.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     2.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.467     4.404    decoder/clk_50m_IBUF_BUFG
+    SLICE_X50Y21         FDCE                                         r  decoder/spike_history_reg[225]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[227]/CLR
+                            (recovery check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        18.488ns  (logic 1.059ns (5.730%)  route 17.429ns (94.270%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            8.000ns
+  Clock Path Skew:        4.404ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.404ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  8.000     8.000    
+    W6                                                0.000     8.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     8.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.935     8.935 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.057     9.992    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.124    10.116 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)       16.372    26.488    decoder/rst_n
+    SLICE_X50Y21         FDCE                                         f  decoder/spike_history_reg[227]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874     0.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     2.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.467     4.404    decoder/clk_50m_IBUF_BUFG
+    SLICE_X50Y21         FDCE                                         r  decoder/spike_history_reg[227]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/spike_history_reg[229]/CLR
+                            (recovery check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        18.488ns  (logic 1.059ns (5.730%)  route 17.429ns (94.270%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            8.000ns
+  Clock Path Skew:        4.404ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.404ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  8.000     8.000    
+    W6                                                0.000     8.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     8.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.935     8.935 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           1.057     9.992    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.124    10.116 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)       16.372    26.488    decoder/rst_n
+    SLICE_X50Y21         FDCE                                         f  decoder/spike_history_reg[229]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874     0.874 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.846    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     2.937 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        1.467     4.404    decoder/clk_50m_IBUF_BUFG
+    SLICE_X50Y21         FDCE                                         r  decoder/spike_history_reg[229]/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/classification_valid_reg/CLR
+                            (removal check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.789ns  (logic 0.210ns (26.546%)  route 0.580ns (73.454%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            1.000ns
+  Clock Path Skew:        2.067ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.067ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  1.000     1.000    
+    W6                                                0.000     1.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     1.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.165     1.165 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.394     1.559    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.045     1.604 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)        0.186     1.789    decoder/rst_n
+    SLICE_X1Y2           FDCE                                         f  decoder/classification_valid_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.894     2.067    decoder/clk_50m_IBUF_BUFG
+    SLICE_X1Y2           FDCE                                         r  decoder/classification_valid_reg/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/samples_seen_reg[12]/CLR
+                            (removal check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.125ns  (logic 0.210ns (18.635%)  route 0.915ns (81.365%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            1.000ns
+  Clock Path Skew:        2.034ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.034ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  1.000     1.000    
+    W6                                                0.000     1.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     1.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.165     1.165 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.394     1.559    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.045     1.604 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)        0.521     2.125    decoder/rst_n
+    SLICE_X11Y10         FDCE                                         f  decoder/samples_seen_reg[12]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.861     2.034    decoder/clk_50m_IBUF_BUFG
+    SLICE_X11Y10         FDCE                                         r  decoder/samples_seen_reg[12]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[2]/CLR
+                            (removal check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.154ns  (logic 0.210ns (18.157%)  route 0.945ns (81.843%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            1.000ns
+  Clock Path Skew:        2.063ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.063ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  1.000     1.000    
+    W6                                                0.000     1.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     1.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.165     1.165 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.394     1.559    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.045     1.604 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)        0.551     2.154    decoder/rst_n
+    SLICE_X6Y10          FDCE                                         f  decoder/blanking_count_reg[2]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.890     2.063    decoder/clk_50m_IBUF_BUFG
+    SLICE_X6Y10          FDCE                                         r  decoder/blanking_count_reg[2]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[3]/CLR
+                            (removal check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.154ns  (logic 0.210ns (18.157%)  route 0.945ns (81.843%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            1.000ns
+  Clock Path Skew:        2.063ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.063ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  1.000     1.000    
+    W6                                                0.000     1.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     1.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.165     1.165 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.394     1.559    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.045     1.604 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)        0.551     2.154    decoder/rst_n
+    SLICE_X6Y10          FDCE                                         f  decoder/blanking_count_reg[3]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.890     2.063    decoder/clk_50m_IBUF_BUFG
+    SLICE_X6Y10          FDCE                                         r  decoder/blanking_count_reg[3]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[4]/CLR
+                            (removal check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.154ns  (logic 0.210ns (18.157%)  route 0.945ns (81.843%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            1.000ns
+  Clock Path Skew:        2.063ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.063ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  1.000     1.000    
+    W6                                                0.000     1.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     1.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.165     1.165 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.394     1.559    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.045     1.604 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)        0.551     2.154    decoder/rst_n
+    SLICE_X6Y10          FDCE                                         f  decoder/blanking_count_reg[4]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.890     2.063    decoder/clk_50m_IBUF_BUFG
+    SLICE_X6Y10          FDCE                                         r  decoder/blanking_count_reg[4]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[5]/CLR
+                            (removal check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.154ns  (logic 0.210ns (18.157%)  route 0.945ns (81.843%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            1.000ns
+  Clock Path Skew:        2.063ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.063ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  1.000     1.000    
+    W6                                                0.000     1.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     1.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.165     1.165 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.394     1.559    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.045     1.604 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)        0.551     2.154    decoder/rst_n
+    SLICE_X7Y10          FDCE                                         f  decoder/blanking_count_reg[5]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.890     2.063    decoder/clk_50m_IBUF_BUFG
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[5]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[6]/CLR
+                            (removal check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.154ns  (logic 0.210ns (18.157%)  route 0.945ns (81.843%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            1.000ns
+  Clock Path Skew:        2.063ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.063ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  1.000     1.000    
+    W6                                                0.000     1.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     1.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.165     1.165 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.394     1.559    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.045     1.604 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)        0.551     2.154    decoder/rst_n
+    SLICE_X7Y10          FDCE                                         f  decoder/blanking_count_reg[6]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.890     2.063    decoder/clk_50m_IBUF_BUFG
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[6]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[7]/CLR
+                            (removal check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.154ns  (logic 0.210ns (18.157%)  route 0.945ns (81.843%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            1.000ns
+  Clock Path Skew:        2.063ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.063ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  1.000     1.000    
+    W6                                                0.000     1.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     1.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.165     1.165 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.394     1.559    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.045     1.604 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)        0.551     2.154    decoder/rst_n
+    SLICE_X7Y10          FDCE                                         f  decoder/blanking_count_reg[7]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.890     2.063    decoder/clk_50m_IBUF_BUFG
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[7]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/blanking_count_reg[8]/CLR
+                            (removal check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.154ns  (logic 0.210ns (18.157%)  route 0.945ns (81.843%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            1.000ns
+  Clock Path Skew:        2.063ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.063ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  1.000     1.000    
+    W6                                                0.000     1.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     1.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.165     1.165 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.394     1.559    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.045     1.604 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)        0.551     2.154    decoder/rst_n
+    SLICE_X7Y10          FDCE                                         f  decoder/blanking_count_reg[8]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.890     2.063    decoder/clk_50m_IBUF_BUFG
+    SLICE_X7Y10          FDCE                                         r  decoder/blanking_count_reg[8]/C
+
+Slack:                    inf
+  Source:                 rst_n
+                            (input port clocked by clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            decoder/samples_seen_reg[10]/CLR
+                            (removal check against rising-edge clock clk_50m  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        1.187ns  (logic 0.210ns (17.650%)  route 0.978ns (82.350%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+  Input Delay:            1.000ns
+  Clock Path Skew:        2.035ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.035ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+                         input delay                  1.000     1.000    
+    W6                                                0.000     1.000 r  rst_n (IN)
+                         net (fo=0)                   0.000     1.000    rst_n
+    W6                   IBUF (Prop_ibuf_I_O)         0.165     1.165 r  rst_n_IBUF_inst/O
+                         net (fo=1, routed)           0.394     1.559    decoder/rst_n_IBUF
+    SLICE_X1Y2           LUT1 (Prop_lut1_I0_O)        0.045     1.604 f  decoder/write_ptr[11]_i_2/O
+                         net (fo=4240, routed)        0.584     2.187    decoder/rst_n
+    SLICE_X11Y9          FDCE                                         f  decoder/samples_seen_reg[10]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_50m rise edge)    0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clk_50m (IN)
+                         net (fo=0)                   0.000     0.000    clk_50m
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clk_50m_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clk_50m_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clk_50m_IBUF_BUFG_inst/O
+                         net (fo=4240, routed)        0.862     2.035    decoder/clk_50m_IBUF_BUFG
+    SLICE_X11Y9          FDCE                                         r  decoder/samples_seen_reg[10]/C
+
+
+
+
+

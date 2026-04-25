@@ -1,0 +1,20 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --snapshot snn_tb_snap snn_seizure_tb -log xelab_snn.log 
+Multi-threading is on. Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.eeg_amplitude_encoder
+Compiling module work.lif_neuron
+Compiling module work.dense_layer(WEIGHT_FILE="layer1_...
+Compiling module work.lif_neuron(INPUTS=8)
+Compiling module work.dense_layer(INPUTS=8,NEURONS=1,W...
+Compiling module work.firing_rate_decoder(WINDOW_SIZE=...
+Compiling module work.snn_seizure_top(DECODER_WINDOW=6...
+Compiling module work.snn_seizure_tb
+Built simulation snapshot snn_tb_snap

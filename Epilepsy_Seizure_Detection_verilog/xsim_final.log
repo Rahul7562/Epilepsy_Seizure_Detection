@@ -1,0 +1,184 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Apr 21 17:46:52 2026
+# Process ID         : 12160
+# Current directory  : C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog
+# Command line       : xsim.exe -log xsim_final.log -mode tcl -source {xsim.dir/snn_tb_final/xsim_script.tcl}
+# Log file           : C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/xsim_final.log
+# Journal file       : C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog\xsim.jou
+# Running On         : system
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD EPYC 7452 32-Core Processor                
+# CPU Frequency      : 2346 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 17121 MB
+# Swap memory        : 3623 MB
+# Total Virtual      : 20745 MB
+# Available Virtual  : 11383 MB
+#-----------------------------------------------------------
+source xsim.dir/snn_tb_final/xsim_script.tcl
+# xsim {snn_tb_final} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+WARNING: Too many words specified in data file eeg_dataset.mem
+WARNING: Too many words specified in data file labels.mem
+T=25750000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=25850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=25950000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=26050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=26150000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=26250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=26350000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=26450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=26550000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=26650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=26750000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=26850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=26950000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=27050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=27150000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=27250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=27350000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=27450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=27550000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=27650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=27750000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=27850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=27950000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=28050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=28150000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=28250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=28350000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=28450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=28550000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=28650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=28750000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=28850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=28950000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=29050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=29150000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=29250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=29350000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=29450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=29550000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=29650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=29750000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=29850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=29950000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=30050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=30150000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=30250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=30350000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=30450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=30550000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=30650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=30750000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=30850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=30950000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=31050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=31150000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=31250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=31350000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=31450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=31550000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=31650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=31750000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=31850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=31950000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=51250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=76850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=102450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=128050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=153650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=179250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=204850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=230450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=256050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=281650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=307250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=332850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=358450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=384050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=409650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=435250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=460850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=486450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=512050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=537650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=563250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=588850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=614450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=640050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=665650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=691250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=716850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=742450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=768050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=793650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=819250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=844850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=870450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=896050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=921650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=947250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=972850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=998450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1024050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1049650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1075250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1100850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1126450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1152050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1177650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1203250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1228850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1254450000 | cls_valid=1 alert=0 label=0 rate=135 l2_spk=0 l1=0
+T=1280050000 | cls_valid=1 alert=0 label=1 rate=140 l2_spk=0 l1=0
+T=1305650000 | cls_valid=1 alert=0 label=1 rate=145 l2_spk=0 l1=0
+T=1331250000 | cls_valid=1 alert=0 label=1 rate=120 l2_spk=0 l1=0
+T=1356850000 | cls_valid=1 alert=0 label=1 rate=155 l2_spk=0 l1=0
+T=1382450000 | cls_valid=1 alert=0 label=1 rate=139 l2_spk=0 l1=0
+T=1408050000 | cls_valid=1 alert=0 label=1 rate=140 l2_spk=0 l1=0
+T=1433650000 | cls_valid=1 alert=0 label=1 rate=128 l2_spk=0 l1=0
+T=1459250000 | cls_valid=1 alert=0 label=1 rate=143 l2_spk=0 l1=0
+T=1484850000 | cls_valid=1 alert=0 label=1 rate=118 l2_spk=0 l1=0
+T=1510450000 | cls_valid=1 alert=0 label=1 rate=163 l2_spk=0 l1=0
+T=1536050000 | cls_valid=1 alert=1 label=1 rate=145 l2_spk=0 l1=0
+T=1561650000 | cls_valid=1 alert=0 label=1 rate=155 l2_spk=0 l1=0
+T=1587250000 | cls_valid=1 alert=0 label=1 rate=142 l2_spk=0 l1=0
+T=1612850000 | cls_valid=1 alert=0 label=1 rate=140 l2_spk=0 l1=0
+T=1638450000 | cls_valid=1 alert=0 label=1 rate=134 l2_spk=0 l1=0
+T=1664050000 | cls_valid=1 alert=0 label=1 rate=3 l2_spk=0 l1=0
+T=1689650000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1715250000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1740850000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1766450000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1792050000 | cls_valid=1 alert=0 label=0 rate=0 l2_spk=0 l1=0
+T=1817650000 | cls_valid=1 alert=0 label=0 rate=46 l2_spk=0 l1=0
+T=1843250000 | cls_valid=1 alert=0 label=0 rate=99 l2_spk=0 l1=0
+=================================
+Stimulus Samples Sent: 18512
+Total Classified Samples: 18257
+Correct Predictions: 14211
+Wrong Predictions: 4046
+Accuracy: 77.838637 %
+False Positives: 12
+Seizure Detections: 63
+sample_valid multi-cycle errors: 0
+encoder change events: 5163
+spike bus same-value streak: 257
+layer1 zero cycles: 77129
+layer2 zero cycles: 90390
+layer1 nonzero events: 15686
+layer2 nonzero events: 2425
+classification watchdog cycles: 252
+TB_PASS: classification stream active.
+=================================
+$finish called at time : 1856510 ns : File "C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_tb.v" Line 299
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Apr 21 17:46:55 2026...

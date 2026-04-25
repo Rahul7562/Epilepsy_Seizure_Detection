@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --snapshot "snn_tb_snap" "snn_seizure_tb" -log "xelab_snn.log" 

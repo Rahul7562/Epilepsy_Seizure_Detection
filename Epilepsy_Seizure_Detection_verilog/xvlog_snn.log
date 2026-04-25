@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/eeg_amplitude_encoder.v" into library work
+INFO: [VRFC 10-311] analyzing module eeg_amplitude_encoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v" into library work
+INFO: [VRFC 10-311] analyzing module lif_neuron
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/dense_layer.v" into library work
+INFO: [VRFC 10-311] analyzing module dense_layer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/firing_rate_decoder.v" into library work
+INFO: [VRFC 10-311] analyzing module firing_rate_decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_top.v" into library work
+INFO: [VRFC 10-311] analyzing module snn_seizure_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_tb.sv" into library work
+INFO: [VRFC 10-311] analyzing module snn_seizure_tb

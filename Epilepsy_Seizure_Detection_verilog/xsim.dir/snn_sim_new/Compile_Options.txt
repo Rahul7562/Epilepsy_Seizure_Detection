@@ -1,0 +1,1 @@
+"snn_seizure_tb" -s "snn_sim_new" -debug "typical" -relax -log "xelab_new.log" 

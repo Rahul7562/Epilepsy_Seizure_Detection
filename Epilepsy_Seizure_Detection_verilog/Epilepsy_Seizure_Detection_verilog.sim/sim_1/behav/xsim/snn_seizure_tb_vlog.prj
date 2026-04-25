@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../dense_layer.v" \
+"../../../../eeg_amplitude_encoder.v" \
+"../../../../firing_rate_decoder.v" \
+"../../../../lif_neuron.v" \
+"../../../../snn_seizure_top.v" \
+"../../../../snn_seizure_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

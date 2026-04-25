@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Apr 21 17:46:52 2026
+# Process ID         : 12160
+# Current directory  : C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog
+# Command line       : xsim.exe -log xsim_final.log -mode tcl -source {xsim.dir/snn_tb_final/xsim_script.tcl}
+# Log file           : C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/xsim_final.log
+# Journal file       : C:/Users/rahul/Desktop/Projects/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog\xsim.jou
+# Running On         : system
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD EPYC 7452 32-Core Processor                
+# CPU Frequency      : 2346 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 17121 MB
+# Swap memory        : 3623 MB
+# Total Virtual      : 20745 MB
+# Available Virtual  : 11383 MB
+#-----------------------------------------------------------
+source xsim.dir/snn_tb_final/xsim_script.tcl
+run -all

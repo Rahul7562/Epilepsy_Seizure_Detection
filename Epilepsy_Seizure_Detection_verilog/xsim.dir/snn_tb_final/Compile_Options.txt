@@ -1,0 +1,1 @@
+-debug "typical" -relax "snn_seizure_tb" -s "snn_tb_final" -log "xelab_final.log" 

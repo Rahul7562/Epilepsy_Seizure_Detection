@@ -1,0 +1,21 @@
+{
+  "dataset_root": "C:\\Users\\rahul\\Desktop\\Projects\\Epilepsy_Seizure_Detection\\EEG-Dataset\\Dataset",
+  "output_dir": "C:\\Users\\rahul\\Desktop\\Projects\\Epilepsy_Seizure_Detection\\Epilepsy_Seizure_Detection_verilog",
+  "classes": {
+    "Z": 0,
+    "O": 0,
+    "N": 0,
+    "S": 1
+  },
+  "groups_used_per_class": {
+    "Z": 25,
+    "O": 25,
+    "N": 25,
+    "S": 25
+  },
+  "samples_total": 409700,
+  "normal_samples": 307275,
+  "seizure_samples": 102425,
+  "raw_min": -1885,
+  "raw_max": 2047
+}

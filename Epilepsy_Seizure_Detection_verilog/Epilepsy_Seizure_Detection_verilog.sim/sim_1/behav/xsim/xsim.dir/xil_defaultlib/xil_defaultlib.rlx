@@ -1,0 +1,11 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/Epilepsy_Seizure_Detection_verilog.sim/sim_1/behav/xsim/glbl.v,1756381828,verilog,,,,glbl,,,,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/dense_layer.v,1776797190,verilog,,C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/eeg_amplitude_encoder.v,,dense_layer,,,../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/eeg_amplitude_encoder.v,1776797121,verilog,,C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/firing_rate_decoder.v,,eeg_amplitude_encoder,,,../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/firing_rate_decoder.v,1776777356,verilog,,C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v,,firing_rate_decoder,,,../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v,1776777258,verilog,,C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_top.v,,lif_neuron,,,../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_tb.v,1776795207,verilog,,,,snn_seizure_tb,,,../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,
+C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_top.v,1776782786,verilog,,C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_tb.v,,snn_seizure_top,,,../../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef,,,,,

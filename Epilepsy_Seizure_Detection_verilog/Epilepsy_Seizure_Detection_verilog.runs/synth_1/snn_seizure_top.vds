@@ -1,0 +1,340 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Apr 22 00:34:00 2026
+# Process ID         : 8584
+# Current directory  : C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/Epilepsy_Seizure_Detection_verilog.runs/synth_1
+# Command line       : vivado.exe -log snn_seizure_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source snn_seizure_top.tcl
+# Log file           : C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/Epilepsy_Seizure_Detection_verilog.runs/synth_1/snn_seizure_top.vds
+# Journal file       : C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/Epilepsy_Seizure_Detection_verilog.runs/synth_1\vivado.jou
+# Running On         : system
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD EPYC 7452 32-Core Processor                
+# CPU Frequency      : 2346 MHz
+# CPU Physical cores : 2
+# CPU Logical cores  : 4
+# Host memory        : 17121 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 21416 MB
+# Available Virtual  : 10117 MB
+#-----------------------------------------------------------
+source snn_seizure_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 542.488 ; gain = 222.758
+Command: read_checkpoint -auto_incremental -incremental C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/Epilepsy_Seizure_Detection_verilog.srcs/utils_1/imports/synth_1/test_file.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/Epilepsy_Seizure_Detection_verilog.srcs/utils_1/imports/synth_1/test_file.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top snn_seizure_top -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6712
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1321.289 ; gain = 542.629
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'snn_seizure_top' [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_top.v:9]
+INFO: [Synth 8-6157] synthesizing module 'eeg_amplitude_encoder' [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/eeg_amplitude_encoder.v:17]
+	Parameter SAMPLE_BITS bound to: 16 - type: integer 
+	Parameter CH0_MIN bound to: 16'sb1000000000000000 
+	Parameter CH0_MAX bound to: 16'sb0111111111111111 
+	Parameter CH1_MIN bound to: 16'sb1000000000000000 
+	Parameter CH1_MAX bound to: 16'sb0111111111111111 
+	Parameter CH2_MIN bound to: 16'sb1000000000000000 
+	Parameter CH2_MAX bound to: 16'sb0111111111111111 
+	Parameter CH3_MIN bound to: 16'sb1000000000000000 
+	Parameter CH3_MAX bound to: 16'sb0111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'eeg_amplitude_encoder' (0#1) [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/eeg_amplitude_encoder.v:17]
+INFO: [Synth 8-6157] synthesizing module 'dense_layer' [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/dense_layer.v:13]
+	Parameter INPUTS bound to: 64 - type: integer 
+	Parameter NEURONS bound to: 8 - type: integer 
+	Parameter WEIGHT_BITS bound to: 8 - type: integer 
+	Parameter MEMBRANE_BITS bound to: 16 - type: integer 
+	Parameter THRESHOLD bound to: 200 - type: integer 
+	Parameter LEAK bound to: 1 - type: integer 
+	Parameter DECAY_SHIFT bound to: 4 - type: integer 
+	Parameter WEIGHT_FILE bound to: layer1_weights.mem - type: string 
+INFO: [Synth 8-6157] synthesizing module 'lif_neuron' [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:19]
+	Parameter INPUTS bound to: 64 - type: integer 
+	Parameter WEIGHT_BITS bound to: 8 - type: integer 
+	Parameter MEMBRANE_BITS bound to: 16 - type: integer 
+	Parameter THRESHOLD bound to: 200 - type: integer 
+	Parameter LEAK bound to: 1 - type: integer 
+	Parameter DECAY_SHIFT bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lif_neuron' (0#1) [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'dense_layer' (0#1) [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/dense_layer.v:13]
+INFO: [Synth 8-6157] synthesizing module 'dense_layer__parameterized0' [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/dense_layer.v:13]
+	Parameter INPUTS bound to: 8 - type: integer 
+	Parameter NEURONS bound to: 1 - type: integer 
+	Parameter WEIGHT_BITS bound to: 8 - type: integer 
+	Parameter MEMBRANE_BITS bound to: 16 - type: integer 
+	Parameter THRESHOLD bound to: 100 - type: integer 
+	Parameter LEAK bound to: 0 - type: integer 
+	Parameter DECAY_SHIFT bound to: 4 - type: integer 
+	Parameter WEIGHT_FILE bound to: layer2_weights.mem - type: string 
+INFO: [Synth 8-6157] synthesizing module 'lif_neuron__parameterized0' [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:19]
+	Parameter INPUTS bound to: 8 - type: integer 
+	Parameter WEIGHT_BITS bound to: 8 - type: integer 
+	Parameter MEMBRANE_BITS bound to: 16 - type: integer 
+	Parameter THRESHOLD bound to: 100 - type: integer 
+	Parameter LEAK bound to: 0 - type: integer 
+	Parameter DECAY_SHIFT bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lif_neuron__parameterized0' (0#1) [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'dense_layer__parameterized0' (0#1) [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/dense_layer.v:13]
+INFO: [Synth 8-6157] synthesizing module 'firing_rate_decoder' [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/firing_rate_decoder.v:11]
+	Parameter WINDOW_SIZE bound to: 4096 - type: integer 
+	Parameter POST_ICTAL_BLANK bound to: 256 - type: integer 
+	Parameter FIRE_THRESHOLD bound to: 1500 - type: integer 
+	Parameter RATE_BITS bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'firing_rate_decoder' (0#1) [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/firing_rate_decoder.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'snn_seizure_top' (0#1) [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/snn_seizure_top.v:9]
+WARNING: [Synth 8-6014] Unused sequential element weighted_sum_reg was removed.  [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:78]
+WARNING: [Synth 8-6014] Unused sequential element weight_i_reg was removed.  [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:80]
+WARNING: [Synth 8-6014] Unused sequential element membrane_decayed_reg was removed.  [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:96]
+WARNING: [Synth 8-6014] Unused sequential element membrane_next_reg was removed.  [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:98]
+WARNING: [Synth 8-6014] Unused sequential element weighted_sum_reg was removed.  [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:78]
+WARNING: [Synth 8-6014] Unused sequential element weight_i_reg was removed.  [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:80]
+WARNING: [Synth 8-6014] Unused sequential element membrane_decayed_reg was removed.  [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:96]
+WARNING: [Synth 8-6014] Unused sequential element membrane_next_reg was removed.  [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/lif_neuron.v:98]
+WARNING: [Synth 8-6014] Unused sequential element old_spike_reg was removed.  [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/firing_rate_decoder.v:81]
+WARNING: [Synth 8-6014] Unused sequential element next_count_reg was removed.  [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/firing_rate_decoder.v:90]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1454.656 ; gain = 675.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1454.656 ; gain = 675.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1454.656 ; gain = 675.996
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.307 . Memory (MB): peak = 1454.656 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/constraints.xdc]
+Finished Parsing XDC File [C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1541.496 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.201 . Memory (MB): peak = 1541.496 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1541.496 ; gain = 762.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1541.496 ; gain = 762.836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1541.496 ; gain = 762.836
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'snn_seizure_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                              000 |                              000
+               ST_ENCODE |                              001 |                              001
+               ST_LAYER1 |                              010 |                              010
+               ST_LAYER2 |                              011 |                              011
+               ST_DECODE |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'snn_seizure_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1541.496 ; gain = 762.836
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'layer1/GEN_NEURON[0].u_neuron' (lif_neuron) to 'layer1/GEN_NEURON[1].u_neuron'
+INFO: [Synth 8-223] decloning instance 'layer1/GEN_NEURON[0].u_neuron' (lif_neuron) to 'layer1/GEN_NEURON[2].u_neuron'
+INFO: [Synth 8-223] decloning instance 'layer1/GEN_NEURON[0].u_neuron' (lif_neuron) to 'layer1/GEN_NEURON[3].u_neuron'
+INFO: [Synth 8-223] decloning instance 'layer1/GEN_NEURON[0].u_neuron' (lif_neuron) to 'layer1/GEN_NEURON[4].u_neuron'
+INFO: [Synth 8-223] decloning instance 'layer1/GEN_NEURON[0].u_neuron' (lif_neuron) to 'layer1/GEN_NEURON[5].u_neuron'
+INFO: [Synth 8-223] decloning instance 'layer1/GEN_NEURON[0].u_neuron' (lif_neuron) to 'layer1/GEN_NEURON[6].u_neuron'
+INFO: [Synth 8-223] decloning instance 'layer1/GEN_NEURON[0].u_neuron' (lif_neuron) to 'layer1/GEN_NEURON[7].u_neuron'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	  65 Input   32 Bit       Adders := 1     
+	   4 Input   32 Bit       Adders := 2     
+	   9 Input   32 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 4     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
++---Registers : 
+	             4096 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               16 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input 4096 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 14    
+	   2 Input   13 Bit        Muxes := 4     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 72    
+	   5 Input    4 Bit        Muxes := 4     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1654.570 ; gain = 875.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1669.445 ; gain = 890.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1695.188 ; gain = 916.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1803.391 ; gain = 1024.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 1938.570 ; gain = 1159.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 1938.570 ; gain = 1159.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 1938.570 ; gain = 1159.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 1938.570 ; gain = 1159.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 1938.570 ; gain = 1159.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 1938.570 ; gain = 1159.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    38|
+|3     |LUT1   |    40|
+|4     |LUT2   |   122|
+|5     |LUT3   |    20|
+|6     |LUT4   |  4181|
+|7     |LUT5   |    24|
+|8     |LUT6   |  1193|
+|9     |MUXF7  |   546|
+|10    |MUXF8  |   273|
+|11    |FDCE   |  4240|
+|12    |IBUF   |     3|
+|13    |OBUF   |     2|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 1938.570 ; gain = 1159.910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:00 . Memory (MB): peak = 1938.570 ; gain = 1073.070
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 1938.570 ; gain = 1159.910
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1947.680 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 857 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'snn_seizure_top' is not ideal for floorplanning, since the cellview 'firing_rate_decoder' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1951.371 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c7d7fe8f
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 1951.371 ; gain = 1403.492
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1951.371 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/rahul/Desktop/Epilepsy_Seizure_Detection/Epilepsy_Seizure_Detection_verilog/Epilepsy_Seizure_Detection_verilog.runs/synth_1/snn_seizure_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file snn_seizure_top_utilization_synth.rpt -pb snn_seizure_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 22 00:35:34 2026...

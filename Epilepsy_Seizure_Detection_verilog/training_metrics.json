@@ -1,0 +1,30 @@
+{
+  "dataset_groups_per_class": {
+    "Z": 25,
+    "O": 25,
+    "N": 25,
+    "S": 25
+  },
+  "dataset_samples_used": 102400,
+  "raw_min": -1885,
+  "raw_max": 2047,
+  "q_scale_layer1": 0.019294486691554386,
+  "q_scale_layer2": 0.06515652438004811,
+  "layer1_nonzero": 484,
+  "layer2_nonzero": 7,
+  "train_accuracy": 0.94569091796875,
+  "val_accuracy": 0.947802734375,
+  "train_tp": 19021,
+  "train_tn": 58450,
+  "train_fp": 2990,
+  "train_fn": 1459,
+  "val_tp": 4747,
+  "val_tn": 14664,
+  "val_fp": 696,
+  "val_fn": 373,
+  "positive_weight": 3.0,
+  "layer1_required": "C:\\Users\\rahul\\Desktop\\Projects\\Epilepsy_Seizure_Detection\\Epilepsy_Seizure_Detection_verilog\\layer1_weights.mem",
+  "layer2_required": "C:\\Users\\rahul\\Desktop\\Projects\\Epilepsy_Seizure_Detection\\Epilepsy_Seizure_Detection_verilog\\layer2_weights.mem",
+  "layer1_compat": "C:\\Users\\rahul\\Desktop\\Projects\\Epilepsy_Seizure_Detection\\Epilepsy_Seizure_Detection_verilog\\layer1_weights_setA.mem",
+  "layer2_compat": "C:\\Users\\rahul\\Desktop\\Projects\\Epilepsy_Seizure_Detection\\Epilepsy_Seizure_Detection_verilog\\layer2_weights_setA.mem"
+}
